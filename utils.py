@@ -21,11 +21,11 @@ def write_to_checkpoint_file(data, file_path='checkpoint.txt'):
 # function that returns the L1 board id for the given board name -- to be done 
 def get_board_id(board_name):
     board_ids = {
-        "cdf": 1,
-        "ebsnf": 2,
-        "tes1": 3,
-        "tes2": 4,
-        "dis1": 5,
-        "dis2": 6
+        "cdf": 39,
+        "ebsnf": 38,
+        "tes1": 42,
+        "tes2": 43,
+        "aps1": 40,
+        "aps2": 41
     }
     return board_ids.get(board_name.lower(), None)  # Return None if not found
