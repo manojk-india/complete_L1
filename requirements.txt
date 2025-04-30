@@ -1,0 +1,5 @@
+crewai
+pandas
+matplotlib
+faiss-cpu
+sentence-transformers
