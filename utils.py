@@ -1,6 +1,16 @@
 # Here is where our helper function will be present of all kind ....
-
+import csv
+from datetime import datetime, timedelta
+from sentence_transformers import SentenceTransformer, util
+from datetime import datetime, timedelta
+import requests
+import json
+import os
+from requests.auth import HTTPBasicAuth
+from crewai import Process, Agent, Task, Crew, LLM
 # ficning whoch L2 board is involved 
+
+
 def find_present_words_case_insensitive(query):
     # Convert query to lower case for case-insensitive comparison
     query_lower = query.lower()
@@ -9,7 +19,7 @@ def find_present_words_case_insensitive(query):
     # Collect words that are present in the query (case-insensitive)
     found = [word for word in word_list if word.lower() in query_lower]
     if found:
-        return found
+        return found[0]
     else:
         return None
     
@@ -29,3 +39,268 @@ def get_board_id(board_name):
         "aps2": 41
     }
     return board_ids.get(board_name.lower(), None)  # Return None if not found
+
+
+
+def embed_query(user_query):
+    # This function will take the query and embed it using the LLM model
+    # For now, we will just return the query as is
+    queries = [
+        "Story points assigned to person x in y board in sprint n",
+        "RTB/CTB utilization of y board in sprint n",
+        "RTB/CTB utilization of y person in sprint n",
+        "FTE/FTC utilization of y board in sprint n",
+        "Backlog health for y board",
+        "JIRA hygiene for x board"
+    ]
+    model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+    query_embeddings = model.encode(queries, convert_to_tensor=True)
+    input_embedding = model.encode(user_query, convert_to_tensor=True)
+    scores = util.cos_sim(input_embedding, query_embeddings)
+    best_match_idx = scores.argmax()
+    return queries[best_match_idx], scores[0][best_match_idx].item(), best_match_idx
+
+    
+# getting current sprint name
+def get_current_sprint():
+    # Sprint 1 starts on Jan 1, 2025
+    sprint_start = datetime.strptime("2025-01-01", "%Y-%m-%d")
+    sprint_duration = timedelta(weeks=2)
+    sprints = []
+    current = sprint_start
+
+    # Generate sprint ranges for the whole year
+    while current.year == 2025:
+        sprint_end = current + sprint_duration - timedelta(days=1)
+        sprints.append((current, sprint_end))
+        current += sprint_duration
+
+    today = datetime.now()
+    for i, (start, end) in enumerate(sprints, start=1):
+        if start <= today <= end:
+            return i
+    return None  # If today is not in any sprint (e.g., outside 2025)
+
+
+def get_sprint_id(board_name, sprint_name):
+    sprint_ids = {
+        "cdf": {
+            "sprint 1": 64,
+            "sprint 2": 65,
+            "sprint 3": 66,
+            "sprint 4": 67,
+            "sprint 5": 68,
+            "sprint 6": 69,
+            "sprint 7": 70,
+            "sprint 8": 71,
+            "sprint 9": 72,
+            "sprint 10": 73,
+            "sprint 11": 166,
+        },
+        "ebsnf": {
+            "sprint 1": 54,
+            "sprint 2": 55,
+            "sprint 3": 56,
+            "sprint 4": 57,
+            "sprint 5": 58,
+            "sprint 6": 59,
+            "sprint 7": 60,
+            "sprint 8": 61,
+            "sprint 9": 62,
+            "sprint 10": 63,
+            "sprint 11": 167,
+        },
+        "aps1": {
+            "sprint 1": 74,
+            "sprint 2": 78,
+            "sprint 3": 79,
+            "sprint 4": 80,
+            "sprint 5": 81,
+            "sprint 6": 82,
+            "sprint 7": 83,
+            "sprint 8": 84,
+            "sprint 9": 85,
+            "sprint 10": 86,
+            "sprint 11": 170,
+        },
+        "tes1": {
+            "sprint 1": 76,
+            "sprint 2": 96,
+            "sprint 3": 97,
+            "sprint 4": 98,
+            "sprint 5": 99,
+            "sprint 6": 100,
+            "sprint 7": 101,
+            "sprint 8": 102,
+            "sprint 9": 103,
+            "sprint 10": 104,
+            "sprint 11": 168,
+
+        },
+        
+        "aps2": {
+            "sprint 1": 75,
+            "sprint 2": 87,
+            "sprint 3": 88,
+            "sprint 4": 89,
+            "sprint 5": 90,
+            "sprint 6": 91,
+            "sprint 7": 92,
+            "sprint 8": 93,
+            "sprint 9": 94,
+            "sprint 10": 95,
+            "sprint 11": 171,
+        }  # Add other boards and their sprints here
+    }
+    if( sprint_name != " "):
+        return sprint_ids.get(board_name.lower(), {}).get(sprint_name.lower(), None)  # Return None if not found
+    else:
+        return 9999999
+    
+
+# api caller helper function for tool calling
+def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
+    url = f"https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/{sprint_id}/issue"
+    
+    # Authentication
+    email = os.getenv('JIRA_EMAIL')
+    api_token = os.getenv('JIRA_API_TOKEN')
+    
+    # Request parameters
+    params = {
+        'startAt': 0,
+        'maxResults': 1000
+    }
+    if jql:
+        params['jql'] = jql
+    
+    headers = {'Accept': 'application/json'}
+    auth = HTTPBasicAuth(email, api_token)
+    
+    try:
+        # First read existing data if file exists
+        existing_issues = []
+        if os.path.exists(output_file) and os.path.getsize(output_file) > 0:
+            with open(output_file, 'r') as f:
+                try:
+                    existing_issues = json.load(f)
+                except json.JSONDecodeError:
+                    print(f"Warning: Could not parse existing JSON in {output_file}")
+                    existing_issues = []
+
+        # Fetch new data
+        new_issues = []
+        while True:
+            response = requests.get(url, headers=headers, auth=auth, params=params)
+            response.raise_for_status()
+            
+            data = response.json()
+            new_issues.extend(data['issues'])
+            
+            if data['startAt'] + data['maxResults'] >= data['total']:
+                break
+                
+            params['startAt'] += data['maxResults']
+
+        # Combine existing and new issues
+        all_issues = existing_issues + new_issues
+
+        # Save combined data back to file
+        with open(output_file, 'w') as f:  # Note: using 'w' instead of 'a'
+            json.dump(all_issues, f, indent=2)  # Note: fixed typo 'dmp' to 'dump'
+
+    except requests.exceptions.HTTPError as err:
+        print(f"HTTP error occurred: {err}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    write_to_checkpoint_file("API call completed successfully for sprint id "+str(sprint_id)+" and jql is "+str(jql))
+# getting previous sprint ids for the given board name and current sprint id -- mock function for now ..need to feed in data
+def get_previous_sprint_ids(board_name, current_sprint_id):
+    dictionary = {
+        "cdf": [64,65,66,67,68,69,70,71,72,73,166],
+        "aps1": [74,78,79,80,81,82,83,84,85,86,170],
+        "aps2": [74,87,88,89,90,91,92,93,94,95,171],	
+        "ebsnf": [54,55,56,57,58,59,60,61,62,63,167],
+        "tes1": [76,96,97,98,99,100,101,102,103,104,168],
+
+        # Add other boards here
+    }
+    idx=dictionary.get(board_name.lower()).index(current_sprint_id)
+    if idx == 0:
+        return []
+    elif idx < 6:
+        return dictionary.get(board_name.lower())[:idx]
+    else:
+        return dictionary.get(board_name.lower())[idx-6:idx]
+    return dictionary.get(board_name.lower(), [])
+
+
+def json_to_csv(json_file,csv_file) -> None:
+    """
+    Convert Jira features JSON to CSV with specified fields
+    
+    Args:
+        json_file: Path to input JSON file
+        csv_file: Path to output CSV file
+    """
+    json_file="generated_files/current.json"
+    csv_file="generated_files/current.csv"
+    
+
+    # Define CSV field headers
+    field_names = [
+        "key",
+        "issue_type",
+        "parent_key",
+        "project_key",
+        "fix_versions",
+        "resolution",
+        "sprint",
+        "sprint_status",
+        "priority",
+        "labels",
+        "assignee",
+        "components",
+        "description",
+        "summary",
+        "acceptance_crieteria",
+        "reporter",	
+        "story_points",
+        
+    ]
+
+    # Read JSON data
+    with open(json_file, 'r',encoding='utf-8') as f:
+        data = json.load(f)
+    
+    # Prepare CSV rows
+    rows = []
+    for issue in data:
+        row = {
+            "key": issue.get("key"),
+            "issue_type": issue.get("fields", {}).get("issuetype", {}).get("name"),
+            "parent_key": issue.get("fields", {}).get("parent", {}).get("key"),
+            "project_key": issue.get("fields", {}).get("project", {}).get("key"),
+            "fix_versions": ", ".join([version["name"] for version in issue.get("fields", {}).get("fixVersions", [])]),
+            "resolution": issue.get("fields", {}).get("resolution", {}).get("name"),
+            "sprint": ", ".join([sprint["name"] for sprint in issue.get("fields", {}).get("customfield_10020", [])]),
+            "sprint_status": ", ".join([sprint["state"] for sprint in issue.get("fields", {}).get("customfield_10020", [])]),
+            "priority": issue.get("fields", {}).get("priority", {}).get("name"),
+            "labels": ", ".join(issue.get("fields", {}).get("labels", [])),
+            "assignee": issue.get("fields", {}).get("assignee", {}).get("displayName"),
+            "components": ", ".join([component["name"] for component in issue.get("fields", {}).get("components", [])]),
+            "description": issue.get("fields", {}).get("description"),
+            "summary": issue.get("fields", {}).get("summary"),
+            "acceptance_crieteria": issue.get("fields", {}).get('customfield_10042'),
+            "reporter": issue.get('fields',{}).get('reporter',{}).get('displayName'),
+            "story_points": issue.get('fields',{}).get('customfield_10039')
+        }
+        rows.append(row)
+
+    # Write to CSV
+    with open(csv_file, 'w', newline='',encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=field_names)
+        writer.writeheader()
+        writer.writerows(rows)
+
+json_to_csv("generated_files/current.json","generated_files/current.csv")

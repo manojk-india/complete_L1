@@ -24,26 +24,26 @@ def get_L1_board_data(board_name:str, previous_data_needed_or_not: bool, sprint:
     """ pass the board name and the output file , the sprint name and the person name to the tool to get the L1 board data in the output file 
     Args:
         board_name (str): The name of the board. eg:cdf
-        sprint (str, optional): The name of the sprint. Defaults to None. eg. sprint 1
+        sprint (str, optional): The name of the sprint. Not just the number like 5, 6, etc. Defaults to None. eg. sprint 1,sprint 2,sprint 8 etc.
         person (str, optional): The name of the person. Defaults to None. eg. manoj
     """
     write_to_checkpoint_file("function called with parameters "+"board name "+str(board_name)+" sprint name "+str(sprint))
  
 
-    if( sprint==" "):
+    if( sprint==" " or sprint==None  or sprint=="None"):
         sprint_name = get_current_sprint()
         sprint_id = get_sprint_id(board_name, sprint_name)
-        write_to_checkpoint_file("sprint id is "+str(sprint_id)+ "sprint name is "+str(sprint_name))
+        write_to_checkpoint_file("sprint id is "+str(sprint_id)+ " sprint name is "+str(sprint_name))
     else:
         sprint_id=get_sprint_id(board_name,sprint)
-        write_to_checkpoint_file("sprint id is "+str(sprint_id)+ "sprint name is "+str(sprint))
+        write_to_checkpoint_file("sprint id is "+str(sprint_id)+ " sprint name is "+str(sprint))
 
     if( person!=" "):
         jql=f"assignee={person}"
     else:
         jql=None
 
-    api_helper(jql,"generated_files/current.json")
+    api_helper(sprint_id,jql,"generated_files/current.json")
 
     # If previous data is needed 
     if previous_data_needed_or_not:
@@ -69,14 +69,14 @@ agent = Agent(
 task = Task(
     description=(
         """Given a user query {query}, extract the board name, sprint, and person if present
-        then call the API caller tool to fetch L1 board data and pass the """
+        then call the API caller tool to fetch L1 board data and pass the previous_data_needed_or_not as {flag}."""
     ),
     agent=agent,
     expected_output="L1 board data saved in generated_files/current.json"
 )
 
 crew = Crew(agents=[agent], tasks=[task])
-result = crew.kickoff(inputs={"query":" story points assigned to manoj in cdf board in sprint 8"})
+result = crew.kickoff(inputs={"query":" in sprint 8 tell me the number of story points assigned to Hari","flag":True})	
 
 
 
