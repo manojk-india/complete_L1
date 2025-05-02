@@ -401,39 +401,43 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx
     return None
 
 
-
-def fetch_requested_by(parent_key: str) -> str:
+def fetch_requested_by(parent_key: str, cache: dict) -> str:
     """
     Fetch the 'requested_by' field from the Epic Jira endpoint using the parent_key.
+    Use a cache to avoid duplicate API calls.
     """
-    jira_endpoint = f"https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/{parent_key}"
-    
+    if parent_key in cache:
+        return cache[parent_key]  # Return cached value
+
+    jira_endpoint = f"https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/{parent_key}"
     email = os.getenv('JIRA_EMAIL')
     api_token = os.getenv('JIRA_API_TOKEN')
+
     headers = {
-        "Authorization": "Bearer YOUR_API_TOKEN",
-        "Content-Type": "application/json"
+        'Accept': 'application/json'
     }
-    response = requests.get(jira_endpoint, headers=headers)
+
+    auth = HTTPBasicAuth(email, api_token)
+    response = requests.get(jira_endpoint, headers=headers, auth=auth)
     if response.status_code == 200:
         data = response.json()
-        return data.get("fields", {}).get("requested_by", "Unknown")
+        
+        with open("generated_files/epic.json", 'w') as f:
+            json.dump(data, f, indent=2)
+
+        requested_by = data.get("fields", {}).get("customfield_10043", "Unknown")
+        cache[parent_key] = requested_by  # Store in cache
+        return requested_by
     else:
+        print("no response from the server")
+        cache[parent_key] = "Unknown"  # Store in cache even for failed requests
         return "Unknown"
 
-def add_rtb_ctb_column(df: pd.DataFrame) -> pd.DataFrame:
+def add_rtb_ctb_column(df: pd.DataFrame):
     """
     Add a new column 'requested_by' to the DataFrame by fetching data from the Jira endpoint.
+    Use a cache to avoid duplicate API calls.
     """
-    df['requested_by'] = df['parent_key'].apply(fetch_requested_by)
-    return df
-
-# Example usage
-file_path = r"c:\Users\manok\OneDrive\Desktop\complete_L1\complete_L1\generated_files\current.csv"
-df = pd.read_csv(file_path)
-
-# Add the 'requested_by' column
-df = add_rtb_ctb_column(df)
-
-# Save the updated DataFrame back to a CSV file
-df.to_csv(file_path, index=False)
+    cache = {}  # Initialize an empty dictionary for caching
+    df['requested_by'] = df['parent_key'].apply(lambda key: fetch_requested_by(key, cache))
+    df.to_csv("generated_files/current.csv", index=False) 
