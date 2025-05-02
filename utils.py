@@ -8,7 +8,8 @@ import json
 import os
 from requests.auth import HTTPBasicAuth
 from crewai import Process, Agent, Task, Crew, LLM
-
+import pandas as pd
+from datetime import datetime
 
 def find_present_words_case_insensitive(query):
     # Convert query to lower case for case-insensitive comparison
@@ -77,7 +78,7 @@ def get_current_sprint():
     today = datetime.now()
     for i, (start, end) in enumerate(sprints, start=1):
         if start <= today <= end:
-            return i
+            return f"sprint {i}"
     return None  # If today is not in any sprint (e.g., outside 2025)
 
 # function that returns the sprint id 
@@ -210,9 +211,6 @@ def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
         print(f"HTTP error occurred: {err}")
     except Exception as e:
         print(f"An error occurred: {e}")
-    write_to_checkpoint_file("API call completed successfully for sprint id "+str(sprint_id)+" and jql is "+str(jql))
-    write_to_checkpoint_file("\n")
-
 
 
 # getting previous sprint ids for the given board name and current sprint id -- mock function for now ..need to feed in data
@@ -252,7 +250,7 @@ def json_to_csv(json_file,csv_file) -> None:
         "parent_key",
         "project_key",
         "fix_versions",
-        "resolution",
+        "status",
         "sprint",
         "sprint_status",
         "priority",
@@ -280,7 +278,7 @@ def json_to_csv(json_file,csv_file) -> None:
             "parent_key": issue.get("fields", {}).get("parent", {}).get("key"),
             "project_key": issue.get("fields", {}).get("project", {}).get("key"),
             "fix_versions": ", ".join([version["name"] for version in issue.get("fields", {}).get("fixVersions", [])]),
-            "resolution": issue.get("fields", {}).get("resolution", {}).get("name"),
+            "status": issue.get("fields", {}).get("status", {}).get("name"),
             "sprint": ", ".join([sprint["name"] for sprint in issue.get("fields", {}).get("customfield_10020", [])]),
             "sprint_status": ", ".join([sprint["state"] for sprint in issue.get("fields", {}).get("customfield_10020", [])]),
             "priority": issue.get("fields", {}).get("priority", {}).get("name"),
@@ -331,3 +329,45 @@ def embed_query(user_query):
     }
 
     return queries[best_match_idx], scores[0][best_match_idx].item(),best_match_idx,previous_needed_or_not_dict[value+1]
+
+# main function for API calling
+def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person):
+    """ pass the board name ,previous_data_needed_or_not , sprint name and the person name to the tool to get the L1 board data 
+    Args:
+        board_name (str): The name of the board. eg:cdf
+        previous_data_needed_or_not (bool): Whether to get the previous data or not. True or False
+        sprint (str, optional): The name of the sprint. Defaults to None. eg. sprint 1
+        person (str, optional): The name of the person. Defaults to None. eg. manoj
+    """
+    write_to_checkpoint_file("Crew function called with parameters "+"board_name "+str(board_name)+" sprint_name "+str(sprint)+" person_name "+str(person)+" previous_data_needed_or_not "+str(previous_data_needed_or_not))
+ 
+
+    if(sprint is None):
+        sprint_name = get_current_sprint()
+        sprint_id = get_sprint_id(board_name, sprint_name)
+    else:
+        sprint_id=get_sprint_id(board_name,sprint)
+
+    if(person is not None):
+        jql=f"assignee={person}"
+    else:
+        jql=None
+
+    api_helper(sprint_id,jql,"generated_files/current.json")
+    json_to_csv("generated_files/current.json","generated_files/current.csv")
+
+    # If previous data is needed 
+    if previous_data_needed_or_not:
+        # getting previous 6 sprint id for the given board name , sprintid
+        sprint_ids = get_previous_sprint_ids(board_name, sprint_id)
+        len_of_historical_sprints=len(sprint_ids)
+        for i in sprint_ids:
+            api_helper(i,jql,"generated_files/history.json") 
+        json_to_csv("generated_files/history.json","generated_files/history.csv")
+
+        # getting the historical data average story points for the last 6 sprints
+        df = pd.read_csv("generated_files/history.csv")
+        total_sp=(df['story_points'].sum())/len_of_historical_sprints
+
+        with open("generated_files/average.txt", "w") as f:
+            f.write("The average story points for the retrieved sprints is : "+str(total_sp))
