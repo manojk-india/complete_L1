@@ -28,48 +28,9 @@ write_to_checkpoint_file("previous_needed_or_not is : "+str(previous_needed_or_n
 result=parameter_extracter_crew(Query)
 
 # calling the main API function 
-get_L1_board_data(result["board_name"],previous_needed_or_not,result["sprint_name"],result["person_name"])
+average=get_L1_board_data(result["board_name"],previous_needed_or_not,result["sprint_name"],result["person_name"],idx)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# print(query_info)
-# # so here in query we will have board 
-# name ( compulsory ), person name ( optional ), and the sprint name ( optional )
-# board=find_present_words_case_insensitive(Query)
-# print("board name is : "+str(board))
-# if board:
-#     board_id=get_board_id(board) 
-#     write_to_checkpoint_file("board name is : "+str(board))
-#     write_to_checkpoint_file("board id is : "+str(board_id))
-# else:
-#     write_to_checkpoint_file("Error: Board name cannot be None.")
-
-# board name should not be none ...so handle that error in the future
-
-
+# now we have data in hand -- current.csv , history.csv, variable average 
 
 
 

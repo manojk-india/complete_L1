@@ -232,6 +232,20 @@ def get_previous_sprint_ids(board_name, current_sprint_id):
     else:
         return dictionary.get(board_name.lower())[idx-6:idx]
     
+# getting future 2 sprints 
+def get_future_sprint_ids(board_name, current_sprint_id):
+    dictionary = {
+        "cdf": [64,65,66,67,68,69,70,71,72,73,166],
+        "aps1": [74,78,79,80,81,82,83,84,85,86,170],
+        "aps2": [74,87,88,89,90,91,92,93,94,95,171],	
+        "ebsnf": [54,55,56,57,58,59,60,61,62,63,167],
+        "tes1": [76,96,97,98,99,100,101,102,103,104,168],
+
+        # Add other boards here
+    }
+    idx=dictionary.get(board_name.lower()).index(current_sprint_id)
+    return [dictionary.get(board_name.lower())[idx+1],dictionary.get(board_name.lower())[idx+2]]
+    
 
 # coversting json to csv
 def json_to_csv(json_file,csv_file) -> None:
@@ -328,10 +342,10 @@ def embed_query(user_query):
         6: False,
     }
 
-    return queries[best_match_idx], scores[0][best_match_idx].item(),best_match_idx,previous_needed_or_not_dict[value+1]
+    return queries[best_match_idx], scores[0][best_match_idx].item(),value+1,previous_needed_or_not_dict[value+1]
 
 # main function for API calling
-def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person):
+def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx):
     """ pass the board name ,previous_data_needed_or_not , sprint name and the person name to the tool to get the L1 board data 
     Args:
         board_name (str): The name of the board. eg:cdf
@@ -353,8 +367,21 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person):
     else:
         jql=None
 
-    api_helper(sprint_id,jql,"generated_files/current.json")
-    json_to_csv("generated_files/current.json","generated_files/current.csv")
+    
+    try:
+        os.remove("generated_files/current.json")
+        os.remove("generated_files/history.json")
+    except OSError:
+        pass
+
+    if(idx==5):
+        Fut_sprints=get_future_sprint_ids(board_name,sprint_id)
+        for i in Fut_sprints:
+            api_helper(i,jql,"generated_files/current.json")
+        json_to_csv("generated_files/current.json","generated_files/current.csv")
+    else:
+        api_helper(sprint_id,jql,"generated_files/current.json")
+        json_to_csv("generated_files/current.json","generated_files/current.csv")
 
     # If previous data is needed 
     if previous_data_needed_or_not:
@@ -369,5 +396,44 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person):
         df = pd.read_csv("generated_files/history.csv")
         total_sp=(df['story_points'].sum())/len_of_historical_sprints
 
-        with open("generated_files/average.txt", "w") as f:
-            f.write("The average story points for the retrieved sprints is : "+str(total_sp))
+        return total_sp
+    
+    return None
+
+
+
+def fetch_requested_by(parent_key: str) -> str:
+    """
+    Fetch the 'requested_by' field from the Epic Jira endpoint using the parent_key.
+    """
+    jira_endpoint = f"https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/{parent_key}"
+    
+    email = os.getenv('JIRA_EMAIL')
+    api_token = os.getenv('JIRA_API_TOKEN')
+    headers = {
+        "Authorization": "Bearer YOUR_API_TOKEN",
+        "Content-Type": "application/json"
+    }
+    response = requests.get(jira_endpoint, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        return data.get("fields", {}).get("requested_by", "Unknown")
+    else:
+        return "Unknown"
+
+def add_rtb_ctb_column(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Add a new column 'requested_by' to the DataFrame by fetching data from the Jira endpoint.
+    """
+    df['requested_by'] = df['parent_key'].apply(fetch_requested_by)
+    return df
+
+# Example usage
+file_path = r"c:\Users\manok\OneDrive\Desktop\complete_L1\complete_L1\generated_files\current.csv"
+df = pd.read_csv(file_path)
+
+# Add the 'requested_by' column
+df = add_rtb_ctb_column(df)
+
+# Save the updated DataFrame back to a CSV file
+df.to_csv(file_path, index=False)
