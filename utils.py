@@ -400,7 +400,7 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx
     
     return None
 
-
+# fetching requested_by field from the epic jira endpoint using the parent key
 def fetch_requested_by(parent_key: str, cache: dict) -> str:
     """
     Fetch the 'requested_by' field from the Epic Jira endpoint using the parent_key.
@@ -409,7 +409,7 @@ def fetch_requested_by(parent_key: str, cache: dict) -> str:
     if parent_key in cache:
         return cache[parent_key]  # Return cached value
 
-    jira_endpoint = f"https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/{parent_key}"
+    jira_endpoint = f"https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/{parent_key}"
     email = os.getenv('JIRA_EMAIL')
     api_token = os.getenv('JIRA_API_TOKEN')
 
@@ -421,11 +421,17 @@ def fetch_requested_by(parent_key: str, cache: dict) -> str:
     response = requests.get(jira_endpoint, headers=headers, auth=auth)
     if response.status_code == 200:
         data = response.json()
-        
+
         with open("generated_files/epic.json", 'w') as f:
             json.dump(data, f, indent=2)
 
         requested_by = data.get("fields", {}).get("customfield_10043", "Unknown")
+        
+        if "RTB" in requested_by:
+            requested_by = "RTB"
+        elif "CTB" in requested_by:
+            requested_by = "CTB"
+
         cache[parent_key] = requested_by  # Store in cache
         return requested_by
     else:
@@ -433,6 +439,7 @@ def fetch_requested_by(parent_key: str, cache: dict) -> str:
         cache[parent_key] = "Unknown"  # Store in cache even for failed requests
         return "Unknown"
 
+# RTB/CTB column addition function
 def add_rtb_ctb_column(df: pd.DataFrame):
     """
     Add a new column 'requested_by' to the DataFrame by fetching data from the Jira endpoint.
@@ -441,3 +448,61 @@ def add_rtb_ctb_column(df: pd.DataFrame):
     cache = {}  # Initialize an empty dictionary for caching
     df['requested_by'] = df['parent_key'].apply(lambda key: fetch_requested_by(key, cache))
     df.to_csv("generated_files/current.csv", index=False) 
+
+#FTE/FTC column addition function
+def add_employment_type():
+    csv_path = "generated_files/current.csv"
+    output_path = "generated_files/current.csv"
+    # Define the employment type mapping
+    employment_type = {
+        "Alice": "FTC",
+        "Bob": "FTC",
+        "Rishika": "FTE",
+        "Hari": "FTE",
+        "Apoorva": "FTE",
+        "David": "FTC",
+        "Pavithra": "FTE",	
+        "Alok": "FTE",
+        "Peter": "FTC",
+        "Sai": "FTE",
+        "Krithika": "FTE",
+        "Seetha": "FTC",
+        "Rasheed": "FTE",
+        "Rachin": "FTC",
+        "Nitish": "FTE",
+        "Noor": "FTE",
+        "Khaleel": "FTC",
+        "Vikram": "FTC",
+        "Dube": "FTE",
+        "Ashwin": "FTC",
+    }
+
+    # Read the CSV file
+    df = pd.read_csv(csv_path)
+
+    # Add a new column 'employment_type' based on the 'assignee' column
+    df['employment_type'] = df['assignee'].map(employment_type).fillna("Unknown")
+
+    # Save the updated DataFrame to a new CSV file
+    df.to_csv(output_path, index=False)
+
+    print(f"Updated file saved to {output_path}")
+
+
+# leave calculater function for the given person and sprint name
+def today_leave_days(name, sprint, csv_path='generated_files/PTO.csv'):
+    # Get today's date in YYYY-MM-DD format
+    today = datetime.now().date()
+    
+    # Read the CSV file
+    df = pd.read_csv(csv_path)
+    
+    # Filter for the person and sprint (case-insensitive)
+    filtered = df[
+        (df['name'].str.lower() == name.lower()) &
+        (df['sprint'].str.lower() == sprint.lower())
+    ]
+    
+    total_leave_days = filtered['total_days'].sum()
+
+    return total_leave_days
