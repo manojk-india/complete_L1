@@ -23,7 +23,7 @@ write_to_checkpoint_file("sim_query is : "+str(sim_query))
 write_to_checkpoint_file("previous_needed_or_not is : "+str(previous_needed_or_not))
 
 # calling the data getter crew to extract the relevant information from the user query
-data_getter_crew(sim_query,previous_needed_or_not)
+data_getter_crew(Query,previous_needed_or_not)
 
 
 

@@ -4516,5 +4516,4523 @@
         "worklogs": []
       }
     }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11112",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11112",
+    "key": "CDF-42",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T15:58:21.135+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10007",
+        "id": "10007",
+        "description": "Functionality or a feature expressed as a user goal.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+        "name": "Story",
+        "subtask": false,
+        "avatarId": 10315,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10013",
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10013",
+        "fields": {
+          "summary": "Add transaction dispute option for credit card users",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10015",
+          "id": "10015",
+          "description": "",
+          "name": "CDF1-8786",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-04-30"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T15:58:21.110+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-42/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T15:56:39.678+0530",
+      "customfield_10020": [
+        {
+          "id": 65,
+          "name": "CDF Sprint 2",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-01-15T03:00:47.824Z",
+          "endDate": "2025-01-29T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:29:06.430Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10013,
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10013",
+        "name": "",
+        "summary": "Add transaction dispute option for credit card users",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/2",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/high_new.svg",
+        "name": "High",
+        "id": "2"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "customfield_10026": "10033_*:*_1_*:*_1123301457_*|*_10005_*:*_1_*:*_0",
+      "labels": [
+        "[]"
+      ],
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i002vb:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T15:58:21.135+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 238 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-2",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 238 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Story in CDF with issue key DIS-2-17",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 65,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/65",
+          "state": "closed",
+          "name": "CDF Sprint 2",
+          "startDate": "2025-01-15T03:00:47.824Z",
+          "endDate": "2025-01-29T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:29:06.430Z",
+          "createdDate": "2025-04-17T10:16:32.730Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11112/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-42/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11322",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11322",
+    "key": "CDF-90",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T15:58:33.851+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10008",
+        "id": "10008",
+        "description": "A small, distinct piece of work.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+        "name": "Task",
+        "subtask": false,
+        "avatarId": 10318,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10012",
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10012",
+        "fields": {
+          "summary": "Enable biometric authentication for mobile banking app",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10012",
+          "id": "10012",
+          "description": "",
+          "name": "CDF1-8783",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-01-31"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T15:58:33.826+0530",
+      "workratio": -1,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-90/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "lastViewed": null,
+      "created": "2025-04-17T16:11:00.542+0530",
+      "customfield_10020": [
+        {
+          "id": 65,
+          "name": "CDF Sprint 2",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-01-15T03:00:47.824Z",
+          "endDate": "2025-01-29T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:29:06.430Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10012,
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10012",
+        "name": "",
+        "summary": "Enable biometric authentication for mobile banking app",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/1",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/highest_new.svg",
+        "name": "Highest",
+        "id": "1"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['enhancement']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1122453308_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i0035z:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T15:58:33.850+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10026",
+          "id": "10026",
+          "name": "Payment Service"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 498 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-1",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 498 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Task in CDF with issue key DIS-1-101",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 65,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/65",
+          "state": "closed",
+          "name": "CDF Sprint 2",
+          "startDate": "2025-01-15T03:00:47.824Z",
+          "endDate": "2025-01-29T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:29:06.430Z",
+          "createdDate": "2025-04-17T10:16:32.730Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-90/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11322/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11339",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11339",
+    "key": "CDF-107",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T15:58:40.639+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10015",
+        "key": "DIS-4",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10015",
+        "fields": {
+          "summary": "Launch AI-powered personal financial assistant",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/3",
+            "description": "This issue is being actively worked on at the moment by the assignee.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/statuses/inprogress.png",
+            "name": "In Progress",
+            "id": "3",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/4",
+              "id": 4,
+              "key": "indeterminate",
+              "colorName": "yellow",
+              "name": "In Progress"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10013",
+          "id": "10013",
+          "description": "",
+          "name": "CDF1-8784",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-02-28"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T15:58:40.616+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-107/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T16:11:10.343+0530",
+      "customfield_10020": [
+        {
+          "id": 65,
+          "name": "CDF Sprint 2",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-01-15T03:00:47.824Z",
+          "endDate": "2025-01-29T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:29:06.430Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10015,
+        "key": "DIS-4",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10015",
+        "name": "",
+        "summary": "Launch AI-powered personal financial assistant",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/1",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/highest_new.svg",
+        "name": "Highest",
+        "id": "1"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['UI']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1122450296_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i0039r:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T15:58:40.639+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10026",
+          "id": "10026",
+          "name": "Payment Service"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 581 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-4",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 581 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-4-110",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 65,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/65",
+          "state": "closed",
+          "name": "CDF Sprint 2",
+          "startDate": "2025-01-15T03:00:47.824Z",
+          "endDate": "2025-01-29T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:29:06.430Z",
+          "createdDate": "2025-04-17T10:16:32.730Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-107/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11339/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11090",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11090",
+    "key": "CDF-20",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:00:05.933+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10013",
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10013",
+        "fields": {
+          "summary": "Add transaction dispute option for credit card users",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10013",
+          "id": "10013",
+          "description": "",
+          "name": "CDF1-8784",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-02-28"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:00:05.910+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-20/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T15:56:25.612+0530",
+      "customfield_10020": [
+        {
+          "id": 66,
+          "name": "CDF Sprint 3",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-01-29T03:00:37.821Z",
+          "endDate": "2025-02-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:30:20.665Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10013,
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10013",
+        "name": "",
+        "summary": "Add transaction dispute option for credit card users",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/1",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/highest_new.svg",
+        "name": "Highest",
+        "id": "1"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "customfield_10026": "10033_*:*_1_*:*_1123420320_*|*_10005_*:*_1_*:*_0",
+      "labels": [
+        "['backend']"
+      ],
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i002qf:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:00:05.932+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10029",
+          "id": "10029",
+          "name": "Database"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 115 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-2",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 115 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-2-5",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 2.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 66,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/66",
+          "state": "closed",
+          "name": "CDF Sprint 3",
+          "startDate": "2025-01-29T03:00:37.821Z",
+          "endDate": "2025-02-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:30:20.665Z",
+          "createdDate": "2025-04-17T10:16:37.191Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-20/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11090/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11102",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11102",
+    "key": "CDF-32",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:01:33.199+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10008",
+        "id": "10008",
+        "description": "A small, distinct piece of work.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+        "name": "Task",
+        "subtask": false,
+        "avatarId": 10318,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10015",
+        "key": "DIS-4",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10015",
+        "fields": {
+          "summary": "Launch AI-powered personal financial assistant",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/3",
+            "description": "This issue is being actively worked on at the moment by the assignee.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/statuses/inprogress.png",
+            "name": "In Progress",
+            "id": "3",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/4",
+              "id": 4,
+              "key": "indeterminate",
+              "colorName": "yellow",
+              "name": "In Progress"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10013",
+          "id": "10013",
+          "description": "",
+          "name": "CDF1-8784",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-02-28"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:01:33.177+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-32/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T15:56:33.246+0530",
+      "customfield_10020": [
+        {
+          "id": 67,
+          "name": "CDF Sprint 4",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-02-12T03:00:08.836Z",
+          "endDate": "2025-02-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:32:22.430Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10015,
+        "key": "DIS-4",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10015",
+        "name": "",
+        "summary": "Launch AI-powered personal financial assistant",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/2",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/high_new.svg",
+        "name": "High",
+        "id": "2"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['bugfix']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1123499952_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i002t3:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:01:33.198+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10029",
+          "id": "10029",
+          "name": "Database"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 193 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-4",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 193 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Task in CDF with issue key DIS-4-8",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 67,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/67",
+          "state": "closed",
+          "name": "CDF Sprint 4",
+          "startDate": "2025-02-12T03:00:08.836Z",
+          "endDate": "2025-02-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:32:22.430Z",
+          "createdDate": "2025-04-17T10:16:39.415Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-32/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11102/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11348",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11348",
+    "key": "CDF-116",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:01:52.232+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10012",
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10012",
+        "fields": {
+          "summary": "Enable biometric authentication for mobile banking app",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10012",
+          "id": "10012",
+          "description": "",
+          "name": "CDF1-8783",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-01-31"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:01:52.205+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-116/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T16:11:15.038+0530",
+      "customfield_10020": [
+        {
+          "id": 67,
+          "name": "CDF Sprint 4",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-02-12T03:00:08.836Z",
+          "endDate": "2025-02-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:32:22.430Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10012,
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10012",
+        "name": "",
+        "summary": "Enable biometric authentication for mobile banking app",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/4",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/low_new.svg",
+        "name": "Low",
+        "id": "4"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['backend']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1122637194_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i003br:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:01:52.232+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10026",
+          "id": "10026",
+          "name": "Payment Service"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 638 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-1",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 638 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-1-105",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 67,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/67",
+          "state": "closed",
+          "name": "CDF Sprint 4",
+          "startDate": "2025-02-12T03:00:08.836Z",
+          "endDate": "2025-02-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:32:22.430Z",
+          "createdDate": "2025-04-17T10:16:39.415Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-116/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11348/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11372",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11372",
+    "key": "CDF-140",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:02:07.946+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10008",
+        "id": "10008",
+        "description": "A small, distinct piece of work.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+        "name": "Task",
+        "subtask": false,
+        "avatarId": 10318,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10012",
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10012",
+        "fields": {
+          "summary": "Enable biometric authentication for mobile banking app",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10013",
+          "id": "10013",
+          "description": "",
+          "name": "CDF1-8784",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-02-28"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:02:07.921+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-140/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T16:11:27.111+0530",
+      "customfield_10020": [
+        {
+          "id": 67,
+          "name": "CDF Sprint 4",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-02-12T03:00:08.836Z",
+          "endDate": "2025-02-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:32:22.430Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10012,
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10012",
+        "name": "",
+        "summary": "Enable biometric authentication for mobile banking app",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/1",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/highest_new.svg",
+        "name": "Highest",
+        "id": "1"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "customfield_10026": "10033_*:*_1_*:*_1122640835_*|*_10005_*:*_1_*:*_0",
+      "labels": [
+        "['UI']"
+      ],
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i003h3:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:02:07.946+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 747 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-1",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 747 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Task in CDF with issue key DIS-1-110",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 67,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/67",
+          "state": "closed",
+          "name": "CDF Sprint 4",
+          "startDate": "2025-02-12T03:00:08.836Z",
+          "endDate": "2025-02-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:32:22.430Z",
+          "createdDate": "2025-04-17T10:16:39.415Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-140/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11372/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11108",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11108",
+    "key": "CDF-38",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:04:20.608+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10012",
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10012",
+        "fields": {
+          "summary": "Enable biometric authentication for mobile banking app",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10013",
+          "id": "10013",
+          "description": "",
+          "name": "CDF1-8784",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-02-28"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:04:20.582+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-38/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T15:56:37.193+0530",
+      "customfield_10020": [
+        {
+          "id": 68,
+          "name": "CDF Sprint 5",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-02-26T03:00:50.979Z",
+          "endDate": "2025-03-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:35:45.722Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10012,
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10012",
+        "name": "",
+        "summary": "Enable biometric authentication for mobile banking app",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/4",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/low_new.svg",
+        "name": "Low",
+        "id": "4"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['backend']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1123663415_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i002uf:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:04:20.608+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10027",
+          "id": "10027",
+          "name": "API"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 218 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-1",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 218 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-1-8",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 68,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/68",
+          "state": "closed",
+          "name": "CDF Sprint 5",
+          "startDate": "2025-02-26T03:00:50.979Z",
+          "endDate": "2025-03-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:35:45.722Z",
+          "createdDate": "2025-04-17T10:16:41.759Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-38/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11108/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11130",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11130",
+    "key": "CDF-60",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:04:35.264+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10012",
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10012",
+        "fields": {
+          "summary": "Enable biometric authentication for mobile banking app",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10013",
+          "id": "10013",
+          "description": "",
+          "name": "CDF1-8784",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-02-28"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:04:35.234+0530",
+      "workratio": -1,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-60/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "lastViewed": null,
+      "created": "2025-04-17T15:56:50.879+0530",
+      "customfield_10020": [
+        {
+          "id": 68,
+          "name": "CDF Sprint 5",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-02-26T03:00:50.979Z",
+          "endDate": "2025-03-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:35:45.722Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10012,
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10012",
+        "name": "",
+        "summary": "Enable biometric authentication for mobile banking app",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/4",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/low_new.svg",
+        "name": "Low",
+        "id": "4"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['backend']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1123664385_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i002zb:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:04:35.264+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10028",
+          "id": "10028",
+          "name": "UI"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 361 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-1",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 361 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-1-13",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 68,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/68",
+          "state": "closed",
+          "name": "CDF Sprint 5",
+          "startDate": "2025-02-26T03:00:50.979Z",
+          "endDate": "2025-03-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:35:45.722Z",
+          "createdDate": "2025-04-17T10:16:41.759Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-60/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11130/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11330",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11330",
+    "key": "CDF-98",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:04:59.609+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10014",
+        "key": "DIS-3",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10014",
+        "fields": {
+          "summary": "Fix notifications",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10013",
+          "id": "10013",
+          "description": "",
+          "name": "CDF1-8784",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-02-28"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:04:59.584+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-98/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T16:11:05.539+0530",
+      "customfield_10020": [
+        {
+          "id": 68,
+          "name": "CDF Sprint 5",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-02-26T03:00:50.979Z",
+          "endDate": "2025-03-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:35:45.722Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10014,
+        "key": "DIS-3",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10014",
+        "name": "",
+        "summary": "Fix notifications",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/2",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/high_new.svg",
+        "name": "High",
+        "id": "2"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['bugfix']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1122834069_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i0037r:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:04:59.608+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10025",
+          "id": "10025",
+          "name": "Auth Service"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 537 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-3",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 537 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-3-104",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 68,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/68",
+          "state": "closed",
+          "name": "CDF Sprint 5",
+          "startDate": "2025-02-26T03:00:50.979Z",
+          "endDate": "2025-03-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:35:45.722Z",
+          "createdDate": "2025-04-17T10:16:41.759Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-98/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11330/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11368",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11368",
+    "key": "CDF-136",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:05:21.285+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10013",
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10013",
+        "fields": {
+          "summary": "Add transaction dispute option for credit card users",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10014",
+          "id": "10014",
+          "description": "",
+          "name": "CDF1-8785",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-04-30"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:05:21.261+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-136/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T16:11:25.135+0530",
+      "customfield_10020": [
+        {
+          "id": 68,
+          "name": "CDF Sprint 5",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-02-26T03:00:50.979Z",
+          "endDate": "2025-03-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:35:45.722Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10013,
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10013",
+        "name": "",
+        "summary": "Add transaction dispute option for credit card users",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/2",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/high_new.svg",
+        "name": "High",
+        "id": "2"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['bugfix']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1122836150_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i003g7:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:05:21.285+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10028",
+          "id": "10028",
+          "name": "UI"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 732 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-2",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 732 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-2-124",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 68,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/68",
+          "state": "closed",
+          "name": "CDF Sprint 5",
+          "startDate": "2025-02-26T03:00:50.979Z",
+          "endDate": "2025-03-12T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:35:45.722Z",
+          "createdDate": "2025-04-17T10:16:41.759Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-136/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11368/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11125",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11125",
+    "key": "CDF-55",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:07:53.050+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10007",
+        "id": "10007",
+        "description": "Functionality or a feature expressed as a user goal.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+        "name": "Story",
+        "subtask": false,
+        "avatarId": 10315,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10012",
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10012",
+        "fields": {
+          "summary": "Enable biometric authentication for mobile banking app",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10014",
+          "id": "10014",
+          "description": "",
+          "name": "CDF1-8785",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-04-30"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:07:53.030+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-55/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T15:56:47.665+0530",
+      "customfield_10020": [
+        {
+          "id": 69,
+          "name": "CDF Sprint 6",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-03-12T03:00:31.172Z",
+          "endDate": "2025-03-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:38:34.693Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10012,
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10012",
+        "name": "",
+        "summary": "Enable biometric authentication for mobile banking app",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/4",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/low_new.svg",
+        "name": "Low",
+        "id": "4"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['UI']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1123865385_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i002y7:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:07:53.050+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10028",
+          "id": "10028",
+          "name": "UI"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 321 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-1",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 321 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Story in CDF with issue key DIS-1-12",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 69,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/69",
+          "state": "closed",
+          "name": "CDF Sprint 6",
+          "startDate": "2025-03-12T03:00:31.172Z",
+          "endDate": "2025-03-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:38:34.693Z",
+          "createdDate": "2025-04-17T10:16:44.066Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11125/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-55/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11345",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11345",
+    "key": "CDF-113",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:08:09.973+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10012",
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10012",
+        "fields": {
+          "summary": "Enable biometric authentication for mobile banking app",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10015",
+          "id": "10015",
+          "description": "",
+          "name": "CDF1-8786",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-04-30"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:08:09.952+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-113/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T16:11:13.499+0530",
+      "customfield_10020": [
+        {
+          "id": 69,
+          "name": "CDF Sprint 6",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-03-12T03:00:31.172Z",
+          "endDate": "2025-03-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:38:34.693Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10012,
+        "key": "DIS-1",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10012",
+        "name": "",
+        "summary": "Enable biometric authentication for mobile banking app",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/1",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/highest_new.svg",
+        "name": "Highest",
+        "id": "1"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "labels": [
+        "['enhancement']"
+      ],
+      "customfield_10026": "10033_*:*_1_*:*_1123016473_*|*_10005_*:*_1_*:*_0",
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i003b3:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:08:09.972+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10027",
+          "id": "10027",
+          "name": "API"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 623 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-1",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 623 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-1-103",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 69,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/69",
+          "state": "closed",
+          "name": "CDF Sprint 6",
+          "startDate": "2025-03-12T03:00:31.172Z",
+          "endDate": "2025-03-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:38:34.693Z",
+          "createdDate": "2025-04-17T10:16:44.066Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11345/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-113/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11373",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11373",
+    "key": "CDF-141",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:08:29.574+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10035",
+        "id": "10035",
+        "description": "A problem or error.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+        "name": "Bug",
+        "subtask": false,
+        "avatarId": 10303,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10013",
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10013",
+        "fields": {
+          "summary": "Add transaction dispute option for credit card users",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10012",
+          "id": "10012",
+          "description": "",
+          "name": "CDF1-8783",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-01-31"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:08:29.551+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-141/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T16:11:27.675+0530",
+      "customfield_10020": [
+        {
+          "id": 69,
+          "name": "CDF Sprint 6",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-03-12T03:00:31.172Z",
+          "endDate": "2025-03-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:38:34.693Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10013,
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10013",
+        "name": "",
+        "summary": "Add transaction dispute option for credit card users",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/2",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/high_new.svg",
+        "name": "High",
+        "id": "2"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "customfield_10026": "10033_*:*_1_*:*_1123021899_*|*_10005_*:*_1_*:*_0",
+      "labels": [
+        "[]"
+      ],
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i003hb:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:08:29.574+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10027",
+          "id": "10027",
+          "name": "API"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 756 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-2",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 756 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Defect in CDF with issue key DIS-2-126",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 69,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/69",
+          "state": "closed",
+          "name": "CDF Sprint 6",
+          "startDate": "2025-03-12T03:00:31.172Z",
+          "endDate": "2025-03-26T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:38:34.693Z",
+          "createdDate": "2025-04-17T10:16:44.066Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11373/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-141/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+    "id": "11337",
+    "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/11337",
+    "key": "CDF-105",
+    "fields": {
+      "statuscategorychangedate": "2025-04-30T16:09:42.990+0530",
+      "issuetype": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10008",
+        "id": "10008",
+        "description": "A small, distinct piece of work.",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+        "name": "Task",
+        "subtask": false,
+        "avatarId": 10318,
+        "hierarchyLevel": 0
+      },
+      "parent": {
+        "id": "10013",
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10013",
+        "fields": {
+          "summary": "Add transaction dispute option for credit card users",
+          "status": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
+            "description": "",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+            "name": "Backlog",
+            "id": "10003",
+            "statusCategory": {
+              "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
+              "id": 2,
+              "key": "new",
+              "colorName": "blue-gray",
+              "name": "To Do"
+            }
+          },
+          "priority": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/3",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/medium_new.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "issuetype": {
+            "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
+            "id": "10000",
+            "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+            "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/issuetypes/epic.svg",
+            "name": "Feature",
+            "subtask": false,
+            "hierarchyLevel": 1
+          }
+        }
+      },
+      "timespent": null,
+      "sprint": null,
+      "customfield_10030": null,
+      "project": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/project/10038",
+        "id": "10038",
+        "key": "CDF",
+        "name": "CDF",
+        "projectTypeKey": "software",
+        "simplified": false,
+        "avatarUrls": {
+          "48x48": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423",
+          "24x24": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=small",
+          "16x16": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=xsmall",
+          "32x32": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10423?size=medium"
+        }
+      },
+      "fixVersions": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/version/10014",
+          "id": "10014",
+          "description": "",
+          "name": "CDF1-8785",
+          "archived": false,
+          "released": false,
+          "releaseDate": "2025-04-30"
+        }
+      ],
+      "statusCategory": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      },
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "resolution": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/resolution/10000",
+        "id": "10000",
+        "description": "GreenHopper Managed Resolution",
+        "name": "Done"
+      },
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": "2025-04-30T16:09:42.969+0530",
+      "workratio": -1,
+      "lastViewed": null,
+      "watches": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-105/watchers",
+        "watchCount": 1,
+        "isWatching": false
+      },
+      "created": "2025-04-17T16:11:09.285+0530",
+      "customfield_10020": [
+        {
+          "id": 70,
+          "name": "CDF Sprint 7",
+          "state": "closed",
+          "boardId": 39,
+          "goal": "",
+          "startDate": "2025-03-26T03:00:11.414Z",
+          "endDate": "2025-04-09T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:40:03.425Z"
+        }
+      ],
+      "customfield_10021": null,
+      "epic": {
+        "id": 10013,
+        "key": "DIS-2",
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/epic/10013",
+        "name": "",
+        "summary": "Add transaction dispute option for credit card users",
+        "color": {
+          "key": "color_1"
+        },
+        "issueColor": {
+          "key": "purple"
+        },
+        "done": false
+      },
+      "customfield_10022": null,
+      "priority": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/priority/4",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/priorities/low_new.svg",
+        "name": "Low",
+        "id": "4"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "customfield_10026": "10033_*:*_1_*:*_1123113705_*|*_10005_*:*_1_*:*_0",
+      "labels": [
+        "['bugfix']"
+      ],
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "EPIC_LINK_SHOULD_BE_USED",
+          "message": "To set an epic as the parent, use the epic link instead"
+        }
+      },
+      "customfield_10019": "0|i0039b:",
+      "timeestimate": null,
+      "aggregatetimeoriginalestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3A454a882c-1ded-452f-9bed-0ab517d27317",
+        "accountId": "712020:454a882c-1ded-452f-9bed-0ab517d27317",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "24x24": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "16x16": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png",
+          "32x32": "https://secure.gravatar.com/avatar/8ae1af5fdb6baa15699e39a5ec6f70d1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FH-6.png"
+        },
+        "displayName": "Hari",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "updated": "2025-04-30T16:09:42.990+0530",
+      "status": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10005",
+        "description": "",
+        "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
+        "name": "Done",
+        "id": "10005",
+        "statusCategory": {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "components": [
+        {
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10025",
+          "id": "10025",
+          "name": "Auth Service"
+        }
+      ],
+      "timeoriginalestimate": null,
+      "description": "Description for Task 570 in CDF",
+      "customfield_10010": null,
+      "customfield_10014": "DIS-2",
+      "timetracking": {},
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "attachment": [],
+      "flagged": false,
+      "summary": "TASK 570 for CDF",
+      "creator": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10042": "Acceptance criteria for issue type Task in CDF with issue key DIS-2-113",
+      "reporter": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "16x16": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/7592989f456319939c9bfe9d015b662a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FU-2.png"
+        },
+        "displayName": "umabhargavigadde",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+      },
+      "customfield_10043": null,
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "progress": 0,
+        "total": 0
+      },
+      "customfield_10001": null,
+      "customfield_10002": [],
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": 1.0,
+      "environment": null,
+      "duedate": null,
+      "closedSprints": [
+        {
+          "id": 70,
+          "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/70",
+          "state": "closed",
+          "name": "CDF Sprint 7",
+          "startDate": "2025-03-26T03:00:11.414Z",
+          "endDate": "2025-04-09T03:00:00.000Z",
+          "completeDate": "2025-04-30T10:40:03.425Z",
+          "createdDate": "2025-04-17T10:16:46.517Z",
+          "originBoardId": 39,
+          "goal": ""
+        }
+      ],
+      "progress": {
+        "progress": 0,
+        "total": 0
+      },
+      "comment": {
+        "comments": [],
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/11337/comment",
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "votes": {
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/CDF-105/votes",
+        "votes": 0,
+        "hasVoted": false
+      },
+      "worklog": {
+        "startAt": 0,
+        "maxResults": 20,
+        "total": 0,
+        "worklogs": []
+      }
+    }
   }
 ]

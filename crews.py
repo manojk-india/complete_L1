@@ -17,7 +17,7 @@ llm = LLM(
 
 ############################################################################################ code for data getter crew and agent
 @tool("API caller")
-def get_L1_board_data(board_name:str, previous_data_needed_or_not: bool, sprint: str = " ",person: str=" ") -> None:
+def get_L1_board_data(board_name:str, previous_data_needed_or_not: bool, sprint=None,person=None) -> None:
     """ pass the board name ,previous_data_needed_or_not , sprint name and the person name to the tool to get the L1 board data 
     Args:
         board_name (str): The name of the board. eg:cdf

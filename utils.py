@@ -8,7 +8,6 @@ import json
 import os
 from requests.auth import HTTPBasicAuth
 from crewai import Process, Agent, Task, Crew, LLM
-# ficning whoch L2 board is involved 
 
 
 def find_present_words_case_insensitive(query):
