@@ -81,7 +81,7 @@ def get_current_sprint():
             return i
     return None  # If today is not in any sprint (e.g., outside 2025)
 
-
+# function that returns the sprint id 
 def get_sprint_id(board_name, sprint_name):
     sprint_ids = {
         "cdf": {
@@ -152,11 +152,9 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 11": 171,
         }  # Add other boards and their sprints here
     }
-    if( sprint_name != " "):
-        return sprint_ids.get(board_name.lower(), {}).get(sprint_name.lower(), None)  # Return None if not found
-    else:
-        return 9999999
-    
+   
+    return sprint_ids.get(board_name.lower(), {}).get(sprint_name.lower(), None)  
+
 
 # api caller helper function for tool calling
 def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
@@ -214,6 +212,10 @@ def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
     except Exception as e:
         print(f"An error occurred: {e}")
     write_to_checkpoint_file("API call completed successfully for sprint id "+str(sprint_id)+" and jql is "+str(jql))
+    write_to_checkpoint_file("\n")
+
+
+
 # getting previous sprint ids for the given board name and current sprint id -- mock function for now ..need to feed in data
 def get_previous_sprint_ids(board_name, current_sprint_id):
     dictionary = {
@@ -232,9 +234,9 @@ def get_previous_sprint_ids(board_name, current_sprint_id):
         return dictionary.get(board_name.lower())[:idx]
     else:
         return dictionary.get(board_name.lower())[idx-6:idx]
-    return dictionary.get(board_name.lower(), [])
+    
 
-
+# coversting json to csv
 def json_to_csv(json_file,csv_file) -> None:
     """
     Convert Jira features JSON to CSV with specified fields
@@ -243,9 +245,6 @@ def json_to_csv(json_file,csv_file) -> None:
         json_file: Path to input JSON file
         csv_file: Path to output CSV file
     """
-    json_file="generated_files/current.json"
-    csv_file="generated_files/current.csv"
-    
 
     # Define CSV field headers
     field_names = [
@@ -303,4 +302,33 @@ def json_to_csv(json_file,csv_file) -> None:
         writer.writeheader()
         writer.writerows(rows)
 
-json_to_csv("generated_files/current.json","generated_files/current.csv")
+# embedded function for L1 query classifier
+def embed_query(user_query):
+    # This function will take the query and embed it using the LLM model
+    # For now, we will just return the query as is
+    queries = [
+        "Story points assigned to person x in y board in sprint n",
+        "RTB/CTB utilization of y board in sprint n",
+        "RTB/CTB utilization of y person in sprint n",
+        "FTE/FTC utilization of y board in sprint n",
+        "Backlog health for y board",
+        "JIRA hygiene for x board"
+    ]
+    model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+    query_embeddings = model.encode(queries, convert_to_tensor=True)
+    input_embedding = model.encode(user_query, convert_to_tensor=True)
+    scores = util.cos_sim(input_embedding, query_embeddings)
+    best_match_idx = scores.argmax()
+    value = best_match_idx.item()
+
+
+    previous_needed_or_not_dict={
+        1: True,
+        2: False,
+        3: False,
+        4: False,
+        5: True,
+        6: False,
+    }
+
+    return queries[best_match_idx], scores[0][best_match_idx].item(),best_match_idx,previous_needed_or_not_dict[value+1]

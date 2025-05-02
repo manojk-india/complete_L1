@@ -7,16 +7,49 @@ from dotenv import load_dotenv
 
 # custom imports 
 from utils import *
+from crews import *
 
 
 # loading the environment variables from the .env file
 load_dotenv()
 
+# get the user query 
+Query=input("Enter your L1 level query ( please ask for one thing at a time ): ")
 
-# Query=input("Enter your L1 level query ( you can only ask for one thing at a time ): ")
-# print(get_previous_sprint_ids("cdf", 64))
-print(api_helper(71,jql=None,output_file="generated_files/current.json"))
-# sim_query,sim,idx=embed_query(Query)
+# classify the user query as some predefined categories
+sim_query,sim,idx,previous_needed_or_not=embed_query(Query)
+
+write_to_checkpoint_file("sim_query is : "+str(sim_query))
+write_to_checkpoint_file("previous_needed_or_not is : "+str(previous_needed_or_not))
+
+# calling the data getter crew to extract the relevant information from the user query
+data_getter_crew(sim_query,previous_needed_or_not)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # print(query_info)
 # # so here in query we will have board 
