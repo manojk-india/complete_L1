@@ -118,3 +118,53 @@ user query is : Backlog health of CDF board
 sim_query is : Backlog health for y board
 previous_needed_or_not is : True
 Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not True
+2025-05-03 21:11:21.549524
+user query is : How is backlog looking for APS1
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-03 21:21:24.745174
+user query is : How is backlog looking for APS1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-03 21:31:06.466246
+user query is : Backlog health of TES1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name TES1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-03 21:35:07.142154
+user query is : How is backlog looking for APS1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-03 21:37:59.247926
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-03 21:43:13.167894
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-03 21:44:24.490661
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-03 21:47:02.806702
+user query is : RTB/CTB classification of EBSNF board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name EBSNF sprint_name None person_name None previous_data_needed_or_not False
+2025-05-03 21:50:49.260169
+user query is : RTB CTB classification for APS1 board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name APS1 sprint_name None person_name None previous_data_needed_or_not False
+2025-05-03 21:54:04.839389
+user query is : RTB/CTB classification of EBSNF board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name EBSNF sprint_name None person_name None previous_data_needed_or_not False

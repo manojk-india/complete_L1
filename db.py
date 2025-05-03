@@ -1,8 +1,7 @@
 use_case_examples = {
     1: """
-
+**Note: **" For Story points related query, we need to check the current sprint story points from current.csv and compare it with the average of previous sprints from history.csv."
 **Example Query:** "Story points assigned to Hari in CDF board in sprint 3"
-**Correct Code:**
 #code start
 import pandas as pd
 
@@ -34,12 +33,12 @@ with open("outputs/output.txt", "w") as f:
     f.write("Query: Story points assigned to Hari in CDF board in sprint 7\n")
     f.write(f"Current sprint story points: {current_points}\n")
     f.write(f"Average of previous sprints: {avg_points:.2f}\n")
-    f.write(f"Utilization status: {utilization_status}")
+    f.write(f" Capacity utilization status: {utilization_status}")
 #code end
 
 """,
     2:"""
-**Use Case: RTB/CTB Utilization for a Board in a Sprint**
+**Note** : "DO NOT filter the data for the required board, person and sprint, as the data is already filtered. We need to check the current sprint story points for RTB and CTB from current.csv ."
 
 **Example Query:** "RTB/CTB utilization of CDF board in sprint 3"
 **Correct Code:**
@@ -117,7 +116,7 @@ with open("outputs/output.txt", "w") as f:
 **Use Case: Backlog Health of a Board **
 
 **Example Query:** "Backlog health for CDF board"
-**Correct Code:**
+**Note:** " For Backlog health related query, we need to check the story points in each sprint in current.csv and compare it with the average of previous sprints in history.csv."
 
 #code start
 import pandas as pd
@@ -164,8 +163,8 @@ with open("outputs/output.txt", "w") as f:
     
     for sprint, utilization in utilization_results.items():
         sprint_points = df[df['sprint'] == sprint]['story_points'].fillna(0).sum()
-        f.write(f"Sprint {sprint} story points: {sprint_points}\n")
-        f.write(f"Sprint {sprint} utilization: {utilization}\n")
+        f.write(f"{sprint} story points: {sprint_points}\n")
+        f.write(f"{sprint} backlog status: {utilization}\n")
 
 #code end
 
