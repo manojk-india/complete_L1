@@ -35,7 +35,7 @@ average=get_L1_board_data(result["board_name"],previous_needed_or_not,result["sp
 df=pd.read_csv("generated_files/current.csv")
 add_rtb_ctb_column(df)
 add_employment_type()
-
+pandas_query_crew(Query,idx)
 # now we have data in hand -- current.csv , history.csv, variable average 
 
 

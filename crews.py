@@ -5,7 +5,7 @@ from utils import *
 from models import *
 from prompts import *
 import pandas as pd
-
+from db import *
 
 load_dotenv()
 
@@ -53,55 +53,48 @@ def parameter_extracter_crew(query:str) -> None:
 
 pandas_agent = Agent(
         role="Pandas Query Agent",
-        goal="Generate and execute Pandas queries from user requests.",
-        backstory="You are a data expert specializing in analyzing and extracting information through Pandas DataFrames.",
+        goal="Generate and execute Pandas queries from user requests and following al the rules.",
+        backstory="You are a data expert specializing in analyzing and extracting information through Pandas DataFrames following the rules specified.",
         llm=llm,
         verbose=True,
     )
 
 query_task = Task(
-            description="""Convert the user query User Query given in {prompt2} into a pandas code by understanding the csv file structure
-            to query out specific need of the user and saving it into a text file named output.txt""",
+            description="""Convert the user query User Query given in {prompt2} into a pandas code by understanding the csv file structure, example provided and the rules provided.
+              and saving it into a text file named outputs/output.txt""",
             agent=pandas_agent,
-            expected_output="A pandas code to query out specific need of the user and saving it into a text file named output.txt",
+            expected_output="A pandas code to query out specific need of the user and saving it into a text file named outputs/output.txt",
         )
 
-def pandas_query_crew(query:str):
-    
+def pandas_query_crew(query,idx):
+    example_code = use_case_examples[idx]
     prompt2 = f"""
         You are a Pandas code generation expert. Use this CSV structure:
         {df_structure_main}
-
+        {example_code}
         **Rules:**
-        1. Always start with `df = pd.read_csv("generated_files/current.csv")`
-        2. Never create new DataFrames - only use `df`
-        3. For counts: Use vectorized operations like `.sum()` or `len(df)`
-        4. For separate results (e.g., RTB/CTB), calculate in one code block
-        5. Save results to `output.txt` with this format:
+        1. Do not filter the data for the required board(project_key), person, and sprint, as the data is already filtered.
+        2. Write code using the above rules and the example provided. Code should be executable without errors and shouuld look like the example provided.
+        3. Always start with `df = pd.read_csv("generated_files/current.csv")`
+        4. Never create new DataFrames - only use `df`
+        5. For counts: Use vectorized operations like `.sum()` or `len(df)`
+        6. For separate results (e.g., RTB/CTB), calculate in one code block
+        7. Save results to `outputs/output.txt` with this format:
         - First line: "Query: [user's exact query]"
         - Subsequent lines: Results
-        6. Handle nulls appropriately (e.g., `.fillna(0)` for numeric columns)
-        7. For date columns: Assume MM-DD-YYYY format unless specified
+        8. Handle nulls appropriately (e.g., `.fillna(0)` for numeric columns)
+        9. For date columns: Assume MM-DD-YYYY format unless specified
+        10. Enclose the code in triple backticks (```python) and add a comment `#code start` at the beginning and `#code end` at the end
 
-        **Example Query:** "Count stories assigned to Hari"
-        **Correct Code:**
-        #code start
-        import pandas as pd
-        df = pd.read_csv("generated_files/current.csv")
-
-        story_count = len(df[(df['issue_type'] == 'Story') & (df['assignee'] == 'Hari')])
-
-        with open("output.txt", "w") as f:
-            f.write(f"Query: Count stories assigned to Hari\\n")
-            f.write(f"Number of stories assigned to Hari:"+str(story_count))
-        #code end
+        
+        
 
         **Current Query:** "{query}"
             """
-    crew = Crew(agents=[pandas_agent], tasks=[query_task],inputs={"prompt2": prompt2})
-    result = crew.kickoff()
-    with open("outputs/output.py", "w") as f:
+    crew = Crew(agents=[pandas_agent], tasks=[query_task])
+    result = crew.kickoff(inputs={"prompt2": prompt2})
+    with open("outputs/panda.py", "w") as f:
         f.write(str(result))
+    extract_code_section( "outputs/panda.py","outputs/output.py")
+    os.system("python outputs/output.py")
 
-
-pandas_query_crew("RTB/CTB ratio")

@@ -1,0 +1,6 @@
+Query: Backlog health for CDF board
+Average velocity from previous sprints: 14.83
+Sprint CDF Sprint 10 story points: 24.0
+Sprint CDF Sprint 10 utilization: Overutilized
+Sprint CDF Sprint 11 story points: 21.0
+Sprint CDF Sprint 11 utilization: Overutilized

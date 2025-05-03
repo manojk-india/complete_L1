@@ -297,7 +297,7 @@ def json_to_csv(json_file,csv_file) -> None:
             "sprint_status": ", ".join([sprint["state"] for sprint in issue.get("fields", {}).get("customfield_10020", [])]),
             "priority": issue.get("fields", {}).get("priority", {}).get("name"),
             "labels": ", ".join(issue.get("fields", {}).get("labels", [])),
-            "assignee": issue.get("fields", {}).get("assignee", {}).get("displayName"),
+            "assignee": issue.get("fields").get("assignee", {}).get("displayName", "") if issue.get("fields").get("assignee") else "",
             "components": ", ".join([component["name"] for component in issue.get("fields", {}).get("components", [])]),
             "description": issue.get("fields", {}).get("description"),
             "summary": issue.get("fields", {}).get("summary"),
@@ -371,6 +371,9 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx
     try:
         os.remove("generated_files/current.json")
         os.remove("generated_files/history.json")
+        os.remove("generated_files/current.csv")
+        os.remove("generated_files/history.csv")
+        print("generated_files removed successfully")
     except OSError:
         pass
 
@@ -507,3 +510,24 @@ def total_leave_days(name, sprint):
     total_leave_days = filtered['total_days'].sum()
 
     return total_leave_days
+
+def extract_code_section(input_file, output_file):
+    inside_code = False
+    extracted_lines = []
+
+    with open(input_file, "r", encoding="utf-8") as file:
+        for line in file:
+            if "#code start" in line:
+                inside_code = True
+                continue
+            elif "#code end" in line:
+                inside_code = False
+                break
+            if inside_code:
+                extracted_lines.append(line)
+
+    with open(output_file, "w", encoding="utf-8") as file:
+        file.writelines(extracted_lines)
+    print(f"Extracted code section saved to {output_file}")
+    # os.remove(input_file)
+

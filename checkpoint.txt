@@ -1,0 +1,120 @@
+2025-05-03 13:23:05.674418
+user query is : RTB CTB classification for Hari in CDF board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name None person_name Hari previous_data_needed_or_not False
+2025-05-03 13:48:57.945133
+user query is : Story points assigned to Hari in CDF board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 13:51:37.502859
+user query is : Story points assigned to Hari in cdf board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 13:53:46.972094
+user query is : RTB/CTB classification for Hari in CDF board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name None person_name Hari previous_data_needed_or_not False
+2025-05-03 15:04:19.980769
+user query is : Backlog health od CDF board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not True
+2025-05-03 15:14:57.468264
+user query is : Backlog health od CDF board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not True
+2025-05-03 15:40:32.244825
+user query is : Story points assigned to Hari in cdf board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 15:45:02.691113
+user query is : RTB/CTB classification for Hari in CDF board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name None person_name Hari previous_data_needed_or_not False
+2025-05-03 15:46:30.255211
+user query is : Story points assigned to Hari in cdf board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 15:49:58.947318
+user query is : RTB/CTB classification for Hari in CDF board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not False
+2025-05-03 15:51:19.335706
+user query is : Story points assigned to Hari in cdf board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 15:53:07.667441
+user query is : RTB/CTB classification for Hari in CDF board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not False
+2025-05-03 15:57:04.071696
+user query is : Story points assigned to Hari in cdf board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 16:01:49.905820
+user query is : RTB/CTB classification for Hari in CDF board
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not False
+2025-05-03 16:02:27.402665
+user query is : Story points assigned to Hari in cdf board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 16:06:27.426952
+user query is : Story points assigned to Hari in CDF board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 16:10:30.811920
+user query is : Story points assigned to Hari in CDF board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 16:13:48.512615
+user query is : Story points assigned to Hari in cdf board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 16:15:43.966303
+user query is : Story points assigned to Hari in CDF board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 16:19:21.228874
+user query is : Story points assigned to Hari in cdf board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-03 16:21:05.595944
+user query is : Story points assigned to Hari in CDF board in sprint 9
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name sprint 9 person_name Hari previous_data_needed_or_not True
+2025-05-03 16:23:26.574233
+user query is : Backlog health of CDF board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not True
+2025-05-03 16:26:44.599857
+user query is : RTB/CTB classification for CDF in sprint 8
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name sprint 8 person_name None previous_data_needed_or_not False
+2025-05-03 16:30:15.018104
+user query is : Backlog health of CDF board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not True

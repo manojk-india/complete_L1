@@ -4,6 +4,7 @@
 df_structure_main="""
 The csv file has the following columns:
 - "key": issue key (string)
+- "project_key": board name (string)
 - "summary": summary of issues (string)
 - "description": description of issue (string)
 - "status": one of ["To Do", "In Progress", "Done"]

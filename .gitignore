@@ -10,7 +10,7 @@ env1/
 
 # Ignore CSV files
 *.csv
-
+testor.py
 # Ignore common Python temporary files
 __pycache__/
 *.pyc
