@@ -12,7 +12,7 @@ load_dotenv()
 # Initialize LLM model from sambanova 
 llm = LLM(
     model="sambanova/DeepSeek-R1-Distill-Llama-70B",
-    temperature=0.9,
+    temperature=0.2,
     max_tokens=2048
 )
 
@@ -54,7 +54,7 @@ def parameter_extracter_crew(query:str) -> None:
 pandas_agent = Agent(
         role="Pandas Query Agent",
         goal="Generate and execute Pandas queries from user requests.",
-        backstory="You are a data expert specializing in analyzing and extracting information from Pandas DataFrames.",
+        backstory="You are a data expert specializing in analyzing and extracting information through Pandas DataFrames.",
         llm=llm,
         verbose=True,
     )
@@ -69,31 +69,34 @@ query_task = Task(
 def pandas_query_crew(query:str):
     
     prompt2 = f"""
-            You are given a CSV file with structure {df_structure_main}
-            Analyze the data and provide a concise pandas code that should run on output.csv file to query the result and also
-            to save it in a output.txt file .
+        You are a Pandas code generation expert. Use this CSV structure:
+        {df_structure_main}
 
-            User Query: "{query}"
+        **Rules:**
+        1. Always start with `df = pd.read_csv("generated_files/current.csv")`
+        2. Never create new DataFrames - only use `df`
+        3. For counts: Use vectorized operations like `.sum()` or `len(df)`
+        4. For separate results (e.g., RTB/CTB), calculate in one code block
+        5. Save results to `output.txt` with this format:
+        - First line: "Query: [user's exact query]"
+        - Subsequent lines: Results
+        6. Handle nulls appropriately (e.g., `.fillna(0)` for numeric columns)
+        7. For date columns: Assume MM-DD-YYYY format unless specified
 
-            output should be in this format there should be code start and code end like given below 
-            If they ask you to count anything then dont try to filter the dataframe . use df functions 
-            Dont create any new dataframe after df ..assume every needed data is already filtered out in df and use it to calculate
-            Dont use any other dataframe name other than df
-            eg: df = pd.read_csv("generated_files/output.csv")
-            df = pd.read_csv("generated_files/output.csv") always use this 
-            eg num_rows = len(df)
-            eg column_sum = df["your_column_name"].sum() 
-            if user is asking for individual or seperate result then calculate seperately 
-            eg:rtb_count = (df["requested_by"] == "RTB").sum()
-               tb_count = (df["requested_by"] == "CTB").sum()
-            eg code ...
-            #code start
-            import pandas as pd
-            df = pd.read_csv("generated_files/current.csv")
+        **Example Query:** "Count stories assigned to Hari"
+        **Correct Code:**
+        #code start
+        import pandas as pd
+        df = pd.read_csv("generated_files/current.csv")
 
-            // your pandas generated code 
-            // code for saving it into outputs/output.txt with User Query {df_structure_main} Followed by the output
-            #code end 
+        story_count = len(df[(df['issue_type'] == 'Story') & (df['assignee'] == 'Hari')])
+
+        with open("output.txt", "w") as f:
+            f.write(f"Query: Count stories assigned to Hari\\n")
+            f.write(f"Number of stories assigned to Hari:"+str(story_count))
+        #code end
+
+        **Current Query:** "{query}"
             """
     crew = Crew(agents=[pandas_agent], tasks=[query_task],inputs={"prompt2": prompt2})
     result = crew.kickoff()
@@ -101,4 +104,4 @@ def pandas_query_crew(query:str):
         f.write(str(result))
 
 
-pandas_query_crew("FTE/FTC story point ratio")
+pandas_query_crew("RTB/CTB ratio")

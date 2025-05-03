@@ -490,7 +490,8 @@ def add_employment_type():
 
 
 # leave calculater function for the given person and sprint name
-def today_leave_days(name, sprint, csv_path='generated_files/PTO.csv'):
+def total_leave_days(name, sprint):
+    csv_path='generated_files/PTO.csv'
     # Get today's date in YYYY-MM-DD format
     today = datetime.now().date()
     
