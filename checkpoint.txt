@@ -1,0 +1,40 @@
+2025-05-04 11:37:39.110577
+user query is : Sory points assigned to Alice in sprint 9 in cdf board  
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name sprint 9 person_name Alice previous_data_needed_or_not True
+2025-05-04 11:42:53.832575
+user query is : Story points assigned to Alice in cdf board in sprint 9
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name sprint 9 person_name Alice previous_data_needed_or_not True
+2025-05-04 11:45:46.402200
+user query is : Story points assigned to Alice in cdf board in sprint 9
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name sprint 9 person_name Alice previous_data_needed_or_not True
+2025-05-04 11:49:12.195948
+user query is : RTB/CTB utilization of cdf board 
+sim_query is : RTB/CTB utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name cdf sprint_name None person_name None previous_data_needed_or_not False
+2025-05-04 11:52:17.430379
+user query is : Backlog health of cdf board 
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name None previous_data_needed_or_not True
+2025-05-04 11:54:07.992528
+user query is : Jira hygiene of cdf board 
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False
+Crew function called with parameters board_name cdf sprint_name None person_name None previous_data_needed_or_not False
+2025-05-04 11:57:16.148781
+user query is : Jira Hyiene of CDF board
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False
+Crew function called with parameters board_name cdf sprint_name None person_name None previous_data_needed_or_not False
+2025-05-04 11:59:44.199997
+user query is : Story points assigned to Alice in sprint 9 in cdf board  
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name sprint 9 person_name Alice previous_data_needed_or_not True

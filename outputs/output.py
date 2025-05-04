@@ -1,14 +1,31 @@
 import pandas as pd
 
-# Load current sprint data
-df = pd.read_csv("generated_files/current.csv")
+# Load data
+df = pd.read_csv("generated_files/current.csv")        # current sprint data
+df_history = pd.read_csv("generated_files/history.csv") # previous sprints data
 
-# Calculate RTB and CTB story points
-rtb_points = df[df['requested_by'] == 'RTB']['story_points'].fillna(0).sum()
-ctb_points = df[df['requested_by'] == 'CTB']['story_points'].fillna(0).sum()
+# Calculate total story points for current sprint
+current_points = df['story_points'].fillna(0).sum()
 
-# Output
+# Calculate average story points from previous sprints
+if len(df_history) > 0:
+    avg_points = df_history['story_points'].fillna(0).groupby(df_history['sprint']).sum().mean()
+else:
+    avg_points = 0
+
+# Determine utilization status
+if avg_points == 0:
+    utilization_status = "No historical data available for comparison."
+elif current_points > avg_points:
+    utilization_status = "Overutilized"
+elif current_points < avg_points:
+    utilization_status = "Underutilized"
+else:
+    utilization_status = "Utilization is on par with historical average"
+
+# Save results to output.txt
 with open("outputs/output.txt", "w") as f:
-    f.write("Query: RTB/CTB classification of EBSNF board\n")
-    f.write(f"RTB story points: {rtb_points}\n")
-    f.write(f"CTB story points: {ctb_points}")
+    f.write("Query: Story points assigned to Alice in sprint 9 in cdf board\n")
+    f.write(f"Current sprint story points: {current_points}\n")
+    f.write(f"Average of previous sprints: {avg_points:.2f}\n")
+    f.write(f"Capacity utilization status: {utilization_status}")

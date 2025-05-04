@@ -41,10 +41,8 @@ add_employment_type()
 
 # querying the pandas query crew to get the relevant information from the user query
 if(idx!=6): 
+    # excluded JIRA hygiene case
     pandas_query_crew(Query,idx)
-else:
-    # exclusive for the case of JIRA hygiene
-    analyze_jira_hygiene("generated_files/current.csv")
 
 
 # creating the JIRA hygiene dashboard -- common for all the L1 level queries
@@ -68,14 +66,22 @@ if (result["person_name"]==None):
 else:
     members=[result["person_name"]]
 
-with open("outputs/output.txt", "a") as f:
-        f.write("\n\n")
-        f.write(" Here is the required PTO data ")
-        f.write("=========================================================================")
-        f.write("\n")
-        for i in members:
-            leaves=total_leave_days(i, sprint_name)
-            f.write(f"Name: {i} -- Leave days: {leaves}")
+if(idx!=6):
+    # PTO not required for JIRA hygiene case
+    with open("outputs/output.txt", "a") as f:
+            f.write("\n\n")
+            f.write("=========================================================================")
+            f.write(" Here is the required PTO data ")
+            f.write("=========================================================================")
+            f.write("\n")
+            for i in members:
+                leaves=total_leave_days(i, sprint_name)
+                f.write(f"Name: {i} -- Leave days: {leaves} in {sprint_name} \n")
+            f.write("\n\n")
+else:
+    with open("outputs/output.txt", "w") as file:
+        pass 
+analyze_jira_hygiene("generated_files/current.csv")
 
 
 

@@ -595,7 +595,7 @@ def analyze_jira_hygiene(csv_path):
     ])
     
     # Save to file
-    with open("outputs/output.txt", "w") as f:
+    with open("outputs/output.txt", "a") as f:
         f.write('\n'.join(report))
     
     return "Report generated: jira_hygiene_report.txt"

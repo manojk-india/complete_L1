@@ -1,3 +1,12 @@
+Query: Story points assigned to Alice in sprint 9 in cdf board
+Current sprint story points: 9.0
+Average of previous sprints: 3.50
+Capacity utilization status: Overutilized
+
+========================================================================= Here is the required PTO data =========================================================================
+Name: Alice -- Leave days: 2.0 in sprint 9 
+
+
 Jira Hygiene Report
 ===================
 Missing Values Analysis:
@@ -6,8 +15,8 @@ Column Name             | Missing Entries | Percentage Missing
 parent_key             |              0 |              0.00%
 acceptance_crieteria   |              0 |              0.00%
 description            |              0 |              0.00%
-components             |              5 |             29.41%
-labels                 |              4 |             23.53%
+components             |              0 |              0.00%
+labels                 |              1 |             20.00%
 
 Recommendations:
 1. Mandatory Fields: Ensure required fields like 'labels' and 'components' are populated
