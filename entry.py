@@ -11,13 +11,10 @@ from static_files.utils import *
 from crews import *
 from static_files.hygiene import visualize_missing_data
 
-
-def entrypoint():
+# main entry point file which will be used by chainLit
+def entrypoint(Query:str):
     # loading the environment variables from the .env file
     load_dotenv()
-
-    # get the user query 
-    Query=input("Enter your L1 level query ( please ask for one thing at a time ): ")
 
     # classify the user query as some predefined categories
     sim_query,sim,idx,previous_needed_or_not=embed_query(Query)
@@ -45,11 +42,9 @@ def entrypoint():
         pandas_query_crew(Query,idx)
 
     clear_empty_labels()
-    
+
     # creating the JIRA hygiene dashboard -- common for all the L1 level queries
     visualize_missing_data('generated_files/current.csv', 'outputs/jira_hygiene_dashboard.png')
-
-    restore_empty_labels()
 
 
     # Now integrating the PTO data according to the query
@@ -81,16 +76,13 @@ def entrypoint():
                     leaves=total_leave_days(i, sprint_name)
                     f.write(f"Name: {i} -- Leave days: {leaves} in {sprint_name} \n")
                 f.write("\n\n")
+                f.write(" Below you can find the relevant issues and the JIRA hygiene dashboard \n")
+                f.write("=========================================================================")
+
     else:
-        with open("outputs/output.txt", "w") as file:
-            pass 
-
-
-    analyze_jira_hygiene("generated_files/current.csv")
-
-
-
-visualize_missing_data('generated_files/current.csv', 'outputs/jira_hygiene_dashboard.png')
+        with open("outputs/output.txt", "w") as f:
+            f.write(" Below you can find the relevant issues and the JIRA hygiene dashboard \n")
+            f.write("=========================================================================")
 
 
 

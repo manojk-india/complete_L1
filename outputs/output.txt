@@ -3,24 +3,5 @@ Current sprint story points: 9.0
 Average of previous sprints: 3.50
 Capacity utilization status: Overutilized
 
-========================================================================= Here is the required PTO data =========================================================================
+=================== Here is the required PTO data ===============
 Name: Alice -- Leave days: 2.0 in sprint 9 
-
-
-Jira Hygiene Report
-===================
-Missing Values Analysis:
-Column Name             | Missing Entries | Percentage Missing
--------------------------------------------------------------
-parent_key             |              0 |              0.00%
-acceptance_crieteria   |              0 |              0.00%
-description            |              0 |              0.00%
-components             |              0 |              0.00%
-labels                 |              1 |             20.00%
-
-Recommendations:
-1. Mandatory Fields: Ensure required fields like 'labels' and 'components' are populated
-2. Data Validation: Implement pre-commit checks for empty values
-3. Automation: Use scripts to flag incomplete entries before sprint planning
-4. Training: Educate teams on proper Jira field maintenance
-5. Workflow Rules: Set up Jira automation to prevent empty required fields

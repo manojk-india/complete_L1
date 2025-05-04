@@ -3,3 +3,5 @@ pandas
 matplotlib
 faiss-cpu
 sentence-transformers
+chainlit
+speechrecognition
