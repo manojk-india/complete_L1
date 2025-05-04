@@ -14,7 +14,7 @@ def visualize_missing_data(csv_file_path, output_image_path='outputs/jira_hygien
     total_rows = len(df)
     
     # Count missing values
-    columns_to_check = ['description', 'acceptance_crieteria', 'parent_key']
+    columns_to_check = ['description', 'acceptance_crieteria', 'parent_key','fix_versions','components','labels','story_points']
     missing_counts = {col: df[col].isna().sum() for col in columns_to_check}
     
     # Create figure with beautiful styling

@@ -8,7 +8,19 @@ The use cases we are dealing with ....
 6) JIRA hygiene for x board                                               -- current sprint 
 
 
-*) PTO -- integration in progress
+*) PTO -- integration done
 
 
+story level Jira Hygiene :
+
+    Parent_key
+    fix-version
+    labels
+    components 
+    description 
+    acceptance crieteria 
+
+    acceptance_crieteria_quality -- To do 
+    application_name -- To do
+    comments -- To do
 

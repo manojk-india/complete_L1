@@ -583,17 +583,7 @@ def analyze_jira_hygiene(csv_path):
     
     for res in results:
         report.append(f"{res['Column']:22} | {res['Total Missing']:14} | {res['Percentage Missing']:>18}")
-    
-    # Add recommendations
-    report.extend([
-        "\nRecommendations:",
-        "1. Mandatory Fields: Ensure required fields like 'labels' and 'components' are populated",
-        "2. Data Validation: Implement pre-commit checks for empty values",
-        "3. Automation: Use scripts to flag incomplete entries before sprint planning",
-        "4. Training: Educate teams on proper Jira field maintenance",
-        "5. Workflow Rules: Set up Jira automation to prevent empty required fields"
-    ])
-    
+
     # Save to file
     with open("outputs/output.txt", "a") as f:
         f.write('\n'.join(report))
@@ -612,3 +602,24 @@ def get_membership_of_board(board:str):
     }
 
     return board_membership.get(board.upper(),[])
+
+
+def clear_empty_labels():
+    """
+    Clears rows in the 'labels' column where the value is an empty list ([]).
+    """
+    file_path = "generated_files/current.csv"
+    df = pd.read_csv(file_path)
+    df.loc[df['labels'] == '[]', 'labels'] = ''  # Replace '[]' with an empty string
+    df.to_csv(file_path, index=False)
+    print("Cleared rows with empty labels.")
+
+def restore_empty_labels():
+    """
+    Restores rows in the 'labels' column where the value was cleared (empty string) back to an empty list ([]).
+    """
+    file_path = "generated_files/current.csv"
+    df = pd.read_csv(file_path)
+    df.loc[df['labels'] == '', 'labels'] = '[]'  # Replace empty string with '[]'
+    df.to_csv(file_path, index=False)
+    print("Restored empty labels to [].")

@@ -163,8 +163,8 @@ with open("outputs/output.txt", "w") as f:
     
     for sprint, utilization in utilization_results.items():
         sprint_points = df[df['sprint'] == sprint]['story_points'].fillna(0).sum()
-        f.write(f"{sprint} story points: {sprint_points}\n")
-        f.write(f"{sprint} backlog status: {utilization}\n")
+        f.write("str(sprint)+" story points:" +str(sprint_points))
+        f.write("str(sprint)+" backlog status:"+str(utilization))
 
 #code end
 
