@@ -37,7 +37,7 @@ async def start():
      
 @cl.step(type="tool")
 async def processing(message):
-    await entrypoint(message.content)
+    await entrypoint(message)
     return "Process1 completed successfully"
 
 @cl.step(type="tool")
@@ -169,9 +169,9 @@ async def process_audio():
 async def process_message(message):
     """Main message processing handler"""
     
-    # await processing(message.content)
+    await processing(message.content)
 
-    await asyncio.sleep(3)
+    asyncio.sleep(3)
 
     with open("outputs/output.txt", "r") as f:
         content = f.read()

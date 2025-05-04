@@ -156,6 +156,86 @@ def get_sprint_id(board_name, sprint_name):
     return sprint_ids.get(board_name.lower(), {}).get(sprint_name.lower(), None)  
 
 
+def get_sprint_name(board_name, sprint_id):
+    """
+    Returns the sprint name for a given board name and sprint ID.
+    """
+    sprint_ids = {
+        "cdf": {
+            "sprint 1": 64,
+            "sprint 2": 65,
+            "sprint 3": 66,
+            "sprint 4": 67,
+            "sprint 5": 68,
+            "sprint 6": 69,
+            "sprint 7": 70,
+            "sprint 8": 71,
+            "sprint 9": 72,
+            "sprint 10": 73,
+            "sprint 11": 166,
+        },
+        "ebsnf": {
+            "sprint 1": 54,
+            "sprint 2": 55,
+            "sprint 3": 56,
+            "sprint 4": 57,
+            "sprint 5": 58,
+            "sprint 6": 59,
+            "sprint 7": 60,
+            "sprint 8": 61,
+            "sprint 9": 62,
+            "sprint 10": 63,
+            "sprint 11": 167,
+        },
+        "aps1": {
+            "sprint 1": 74,
+            "sprint 2": 78,
+            "sprint 3": 79,
+            "sprint 4": 80,
+            "sprint 5": 81,
+            "sprint 6": 82,
+            "sprint 7": 83,
+            "sprint 8": 84,
+            "sprint 9": 85,
+            "sprint 10": 86,
+            "sprint 11": 170,
+        },
+        "tes1": {
+            "sprint 1": 76,
+            "sprint 2": 96,
+            "sprint 3": 97,
+            "sprint 4": 98,
+            "sprint 5": 99,
+            "sprint 6": 100,
+            "sprint 7": 101,
+            "sprint 8": 102,
+            "sprint 9": 103,
+            "sprint 10": 104,
+            "sprint 11": 168,
+        },
+        "aps2": {
+            "sprint 1": 75,
+            "sprint 2": 87,
+            "sprint 3": 88,
+            "sprint 4": 89,
+            "sprint 5": 90,
+            "sprint 6": 91,
+            "sprint 7": 92,
+            "sprint 8": 93,
+            "sprint 9": 94,
+            "sprint 10": 95,
+            "sprint 11": 171,
+        }
+    }
+
+    # Reverse the mapping to find sprint name by sprint ID
+    board_sprints = sprint_ids.get(board_name.lower(), {})
+    for sprint_name, id in board_sprints.items():
+        if id == sprint_id:
+            return sprint_name
+    return None  # Return None if sprint ID is not found
+
+
 # api caller helper function for tool calling
 def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
     url = f"https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/{sprint_id}/issue"
@@ -531,64 +611,6 @@ def extract_code_section(input_file, output_file):
     print(f"Extracted code section saved to {output_file}")
     # os.remove(input_file)
 
-#code start
-import pandas as pd
-
-def analyze_jira_hygiene(csv_path):
-    # Read CSV file
-    df = pd.read_csv(csv_path)
-    
-    # Define columns of interest and their missing criteria
-    columns = {
-        'parent_key': {'na': True, 'empty_str': True, 'list_like': False},
-        'acceptance_crieteria': {'na': True, 'empty_str': True, 'list_like': False},
-        'description': {'na': True, 'empty_str': True, 'list_like': False},
-        'components': {'na': True, 'empty_str': True, 'list_like': False},
-        'labels': {'na': True, 'empty_str': True, 'list_like': True}
-    }
-    
-    results = []
-    
-    for col, criteria in columns.items():
-        # Handle different missing value criteria
-        if criteria['list_like']:
-            # For labels column: NaN, empty string, or '[]' are considered missing
-            missing = df[col].apply(lambda x: 
-                pd.isna(x) or 
-                (isinstance(x, str) and (x.strip() == '' or x.strip() == '[]'))
-            )
-        else:
-            # For other columns: NaN or empty string
-            missing = df[col].apply(lambda x: 
-                pd.isna(x) or 
-                (isinstance(x, str) and x.strip() == '')
-            )
-            
-        total_missing = missing.sum()
-        percent_missing = (total_missing / len(df)) * 100
-        results.append({
-            'Column': col,
-            'Total Missing': total_missing,
-            'Percentage Missing': f"{percent_missing:.2f}%"
-        })
-    
-    # Generate report
-    report = [
-        "Jira Hygiene Report",
-        "===================",
-        "Missing Values Analysis:",
-        "Column Name             | Missing Entries | Percentage Missing",
-        "-------------------------------------------------------------"
-    ]
-    
-    for res in results:
-        report.append(f"{res['Column']:22} | {res['Total Missing']:14} | {res['Percentage Missing']:>18}")
-
-    # Save to file
-    with open("outputs/output.txt", "a") as f:
-        f.write('\n'.join(report))
-    
-    return "Report generated: jira_hygiene_report.txt"
 
 # Required for PTO data integration
 def get_membership_of_board(board:str):

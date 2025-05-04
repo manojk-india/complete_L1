@@ -1,31 +1,46 @@
 import pandas as pd
 
-# Load data
-df = pd.read_csv("generated_files/current.csv")        # current sprint data
-df_history = pd.read_csv("generated_files/history.csv") # previous sprints data
+# Load current sprint data
+df = pd.read_csv("generated_files/current.csv")
 
-# Calculate total story points for current sprint
-current_points = df['story_points'].fillna(0).sum()
+# Load historical data for previous sprints
+df_history = pd.read_csv("generated_files/history.csv")
 
-# Calculate average story points from previous sprints
+# Calculate average velocity from previous sprints
 if len(df_history) > 0:
-    avg_points = df_history['story_points'].fillna(0).groupby(df_history['sprint']).sum().mean()
+    avg_velocity = df_history['story_points'].fillna(0).groupby(df_history['sprint']).sum().mean()
 else:
-    avg_points = 0
+    avg_velocity = 0
 
-# Determine utilization status
-if avg_points == 0:
-    utilization_status = "No historical data available for comparison."
-elif current_points > avg_points:
-    utilization_status = "Overutilized"
-elif current_points < avg_points:
-    utilization_status = "Underutilized"
-else:
-    utilization_status = "Utilization is on par with historical average"
+# Identify unique sprints in current data
+unique_sprints = df['sprint'].unique()
 
-# Save results to output.txt
+# Define utilization thresholds (20% difference from average)
+threshold_percentage = 0.2
+overutilized_threshold = avg_velocity * (1 + threshold_percentage)
+underutilized_threshold = avg_velocity * (1 - threshold_percentage)
+
+# Function to determine utilization status
+def check_utilization(sprint_points, avg_velocity, overutilized_threshold, underutilized_threshold):
+    if sprint_points >= overutilized_threshold:
+        return "Overutilized"
+    elif sprint_points <= underutilized_threshold:
+        return "Underutilized"
+    else:
+        return "Healthy"
+
+# Calculate story points and utilization for each sprint
+utilization_results = {}
+for sprint in unique_sprints:
+    sprint_points = df[df['sprint'] == sprint]['story_points'].fillna(0).sum()
+    utilization_results[sprint] = check_utilization(sprint_points, avg_velocity, overutilized_threshold, underutilized_threshold)
+
+# Save results to output file
 with open("outputs/output.txt", "w") as f:
-    f.write("Query: Story points assigned to Alice in sprint 9 in cdf board\n")
-    f.write(f"Current sprint story points: {current_points}\n")
-    f.write(f"Average of previous sprints: {avg_points:.2f}\n")
-    f.write(f"Capacity utilization status: {utilization_status}")
+    f.write(f"Query: Backlog health for Cdf board\n")
+    f.write(f"Average velocity from previous sprints: {avg_velocity:.2f}\n")
+    for sprint, utilization in utilization_results.items():
+        sprint_points = df[df['sprint'] == sprint]['story_points'].fillna(0).sum()
+        f.write(f"{sprint} - Story points: {sprint_points}\n")
+        f.write(f"{sprint} - Backlog status: {utilization}\n")
+

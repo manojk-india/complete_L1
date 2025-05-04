@@ -12,7 +12,7 @@ from crews import *
 from static_files.hygiene import visualize_missing_data
 
 # main entry point file which will be used by chainLit
-def entrypoint(Query:str):
+async def entrypoint(Query:str) -> str:
     # loading the environment variables from the .env file
     load_dotenv()
 
@@ -54,7 +54,15 @@ def entrypoint(Query:str):
 
     # get the current sprint name if not provided in the query
     if (result["sprint_name"]==None):
-        sprint_name=get_current_sprint()
+        current_sprint_name=get_current_sprint()
+        if (idx==5):
+            current_sprint_id=get_sprint_id(board_name,current_sprint_name)
+            sprint_ids=get_future_sprint_ids(board_name, current_sprint_id)
+            sprint_name=[]
+            for i in sprint_ids:
+                sprint_name.append(get_sprint_name(board_name, i))
+        else:
+            sprint_name=list(current_sprint_name)
     else:
         sprint_name=result["sprint_name"]
 
@@ -68,21 +76,21 @@ def entrypoint(Query:str):
         # PTO not required for JIRA hygiene case
         with open("outputs/output.txt", "a") as f:
                 f.write("\n\n")
-                f.write("=========================================================================")
                 f.write(" Here is the required PTO data ")
-                f.write("=========================================================================")
+                f.write("=================================")
                 f.write("\n")
                 for i in members:
-                    leaves=total_leave_days(i, sprint_name)
-                    f.write(f"Name: {i} -- Leave days: {leaves} in {sprint_name} \n")
-                f.write("\n\n")
-                f.write(" Below you can find the relevant issues and the JIRA hygiene dashboard \n")
-                f.write("=========================================================================")
+                    for j in sprint_name:
+                        leaves=total_leave_days(i, j)
+                        if leaves == 0:
+                            continue
+                        f.write(f"Name: {i} -- Leave days: {leaves} in {j} \n")
+                f.write("\n")
 
     else:
         with open("outputs/output.txt", "w") as f:
-            f.write(" Below you can find the relevant issues and the JIRA hygiene dashboard \n")
-            f.write("=========================================================================")
+           pass
+    return "success"
 
 
 
