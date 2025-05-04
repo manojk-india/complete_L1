@@ -1,11 +1,11 @@
 from crewai import Agent, Task, Crew, LLM
 from crewai.tools import tool
 from dotenv import load_dotenv
-from utils import *
-from models import *
-from prompts import *
+from static_files.utils import *
+from static_files.models import *
+from static_files.prompts import *
 import pandas as pd
-from db import *
+from vector_db.db import *
 
 load_dotenv()
 

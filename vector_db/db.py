@@ -31,9 +31,9 @@ else:
 # Output
 with open("outputs/output.txt", "w") as f:
     f.write("Query: Story points assigned to Hari in CDF board in sprint 7\n")
-    f.write(f"Current sprint story points: {current_points}\n")
-    f.write(f"Average of previous sprints: {avg_points:.2f}\n")
-    f.write(f" Capacity utilization status: {utilization_status}")
+    f.write("Current sprint story points: "+str(current_points))
+    f.write("Average of previous sprints: "+str(avg_points:.2f))
+    f.write(" Capacity utilization status: "+str(utilization_status))
 #code end
 
 """,
@@ -56,8 +56,8 @@ ctb_points = df[df['requested_by'] == 'CTB']['story_points'].fillna(0).sum()
 # Output
 with open("outputs/output.txt", "w") as f:
     f.write("Query: RTB/CTB utilization of CDF board in sprint 7\n")
-    f.write(f"RTB story points: {rtb_points}\n")
-    f.write(f"CTB story points: {ctb_points}")
+    f.write("RTB story points: "+str(rtb_points))
+    f.write("CTB story points: "+str(ctb_points))
 #code end
 
     """ ,
@@ -80,8 +80,8 @@ ctb_points = df[df['requested_by'] == 'CTB']['story_points'].fillna(0).sum()
 # Output
 with open("outputs/output.txt", "w") as f:
     f.write("Query: RTB/CTB utilization of CDF board in sprint 7\n")
-    f.write(f"RTB story points: {rtb_points}\n")
-    f.write(f"CTB story points: {ctb_points}")
+    f.write("RTB story points: "+str(rtb_points))
+    f.write("CTB story points: "+str(ctb_points))
 #code end
 
     """
@@ -105,8 +105,8 @@ ftc_points = df[df['work_type'] == 'FTC']['story_points'].fillna(0).sum()
 # Output results
 with open("outputs/output.txt", "w") as f:
     f.write("Query: FTE/FTC utilization of CDF board in sprint 3\n")
-    f.write(f"FTE story points: {fte_points}\n")
-    f.write(f"FTC story points: {ftc_points}")
+    f.write("FTE story points: "+str(fte_points))
+    f.write("FTC story points: "+str(ftc_points))
 #code end
 
 
@@ -136,7 +136,7 @@ else:
 # Identify the unique sprint names in the current sprint data
 unique_sprints = df['sprint'].unique()
 
-# Define thresholds for overutilization and underutilization (e.g., 20% difference from average)
+# Define thresholds for overutilization and underutilization (e.g., 20 percent difference from average)
 threshold_percentage = 0.2
 overutilized_threshold = avg_velocity * (1 + threshold_percentage)
 underutilized_threshold = avg_velocity * (1 - threshold_percentage)
@@ -159,7 +159,7 @@ for sprint in unique_sprints:
 # Output results
 with open("outputs/output.txt", "w") as f:
     f.write(f"Query: Backlog health for CDF board \n")
-    f.write(f"Average velocity from previous sprints: {avg_velocity:.2f}\n")
+    f.write(f"Average velocity from previous sprints: "+str(avg_velocity:.2f))
     
     for sprint, utilization in utilization_results.items():
         sprint_points = df[df['sprint'] == sprint]['story_points'].fillna(0).sum()

@@ -531,3 +531,84 @@ def extract_code_section(input_file, output_file):
     print(f"Extracted code section saved to {output_file}")
     # os.remove(input_file)
 
+#code start
+import pandas as pd
+
+def analyze_jira_hygiene(csv_path):
+    # Read CSV file
+    df = pd.read_csv(csv_path)
+    
+    # Define columns of interest and their missing criteria
+    columns = {
+        'parent_key': {'na': True, 'empty_str': True, 'list_like': False},
+        'acceptance_crieteria': {'na': True, 'empty_str': True, 'list_like': False},
+        'description': {'na': True, 'empty_str': True, 'list_like': False},
+        'components': {'na': True, 'empty_str': True, 'list_like': False},
+        'labels': {'na': True, 'empty_str': True, 'list_like': True}
+    }
+    
+    results = []
+    
+    for col, criteria in columns.items():
+        # Handle different missing value criteria
+        if criteria['list_like']:
+            # For labels column: NaN, empty string, or '[]' are considered missing
+            missing = df[col].apply(lambda x: 
+                pd.isna(x) or 
+                (isinstance(x, str) and (x.strip() == '' or x.strip() == '[]'))
+            )
+        else:
+            # For other columns: NaN or empty string
+            missing = df[col].apply(lambda x: 
+                pd.isna(x) or 
+                (isinstance(x, str) and x.strip() == '')
+            )
+            
+        total_missing = missing.sum()
+        percent_missing = (total_missing / len(df)) * 100
+        results.append({
+            'Column': col,
+            'Total Missing': total_missing,
+            'Percentage Missing': f"{percent_missing:.2f}%"
+        })
+    
+    # Generate report
+    report = [
+        "Jira Hygiene Report",
+        "===================",
+        "Missing Values Analysis:",
+        "Column Name             | Missing Entries | Percentage Missing",
+        "-------------------------------------------------------------"
+    ]
+    
+    for res in results:
+        report.append(f"{res['Column']:22} | {res['Total Missing']:14} | {res['Percentage Missing']:>18}")
+    
+    # Add recommendations
+    report.extend([
+        "\nRecommendations:",
+        "1. Mandatory Fields: Ensure required fields like 'labels' and 'components' are populated",
+        "2. Data Validation: Implement pre-commit checks for empty values",
+        "3. Automation: Use scripts to flag incomplete entries before sprint planning",
+        "4. Training: Educate teams on proper Jira field maintenance",
+        "5. Workflow Rules: Set up Jira automation to prevent empty required fields"
+    ])
+    
+    # Save to file
+    with open("outputs/output.txt", "w") as f:
+        f.write('\n'.join(report))
+    
+    return "Report generated: jira_hygiene_report.txt"
+
+# Required for PTO data integration
+def get_membership_of_board(board:str):
+    board_membership={
+    "CDF": ["Alice","Bob","Rishika","Hari","Apoorva"],
+    "EBSNF": ["Apoorva","David","Pavithra","Alok","Peter"],
+    "TES1": ["Sai","Krithika","David"],
+    "TES2": ["Seetha","Rasheed","Rachin"],	
+    "APS1": ["Nitish","Noor","Khaleel"],
+    "APS2": ["Vikram","Dube","Ashwin"],
+    }
+
+    return board_membership.get(board.upper(),[])

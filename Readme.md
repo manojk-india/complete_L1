@@ -8,7 +8,7 @@ The use cases we are dealing with ....
 6) JIRA hygiene for x board                                               -- current sprint 
 
 
-*) PTO -- data manually 
+*) PTO -- integration in progress
 
 
 
