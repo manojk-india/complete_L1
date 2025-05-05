@@ -8,6 +8,7 @@ from entry import entrypoint
 import wave, time
 import pandas as pd
 import asyncio
+import numpy as np
 
 
 # This is where the frontend chainlit part starts............

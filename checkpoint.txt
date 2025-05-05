@@ -67,3 +67,152 @@ Crew function called with parameters board_name cdf sprint_name None person_name
 user query is : Story points assigned to Hari in cdf board 
 sim_query is : Story points assigned to person x in y board in sprint n
 previous_needed_or_not is : True
+2025-05-04 22:48:36.213818
+user query is : Story points assigned to Hari in CDF board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name Hari previous_data_needed_or_not True
+2025-05-04 22:51:00.019969
+user query is : Jira Hygiene of CDF board
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False
+Crew function called with parameters board_name cdf sprint_name None person_name None previous_data_needed_or_not False
+2025-05-04 22:51:49.049878
+user query is : Backlog health of APS1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-04 22:58:34.591340
+user query is : FTE FTC utilization for CDF  board
+sim_query is : FTE/FTC utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name cdf sprint_name None person_name None previous_data_needed_or_not False
+2025-05-05 09:38:08.620882
+user query is : story points send to Alok in CDF board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name Alok previous_data_needed_or_not True
+2025-05-05 09:40:32.495435
+user query is : story points are sent to Bob in CDF
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name None person_name Bob previous_data_needed_or_not True
+2025-05-05 09:41:32.751615
+user query is : statements assigned to Bob in CDF board in sprint 9
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name sprint 9 person_name Bob previous_data_needed_or_not True
+2025-05-05 09:42:54.077230
+user query is : story points send to Bob in CDF board in sprint 9
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name cdf sprint_name sprint 9 person_name Bob previous_data_needed_or_not True
+2025-05-05 09:47:41.232649
+user query is : story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 09:50:47.915919
+user query is : Story points assigend to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 09:53:33.312295
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 09:56:22.044718
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 10:00:33.309629
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 10:03:06.426976
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 10:05:52.513750
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 10:07:39.595507
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 10:10:12.568092
+user query is : Story points assigned to Noor in APS1 board
+sim_query is : Story points assigned to person x in y board in sprint n
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name Noor previous_data_needed_or_not True
+2025-05-05 10:15:42.880108
+user query is : backlog health of CDF board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not True
+2025-05-05 10:30:17.295436
+user query is : backlog health of APS 1
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS 1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-05 10:34:33.424994
+user query is : backlog health of APS 1
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+2025-05-05 10:36:06.632270
+user query is : backlog health of APS 1
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name APS1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-05 10:49:52.940830
+user query is : backlog help of TES 1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name TES1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-05 10:51:26.378959
+user query is : backlog health of TES 1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+Crew function called with parameters board_name TES1 sprint_name None person_name None previous_data_needed_or_not True
+2025-05-05 10:55:53.838506
+user query is : jeera hygiene for CDF board
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name None person_name jeera previous_data_needed_or_not False
+2025-05-05 10:59:18.117354
+user query is : jeera hygiene for CDF board
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name None person_name jeera previous_data_needed_or_not False
+2025-05-05 11:02:29.976120
+user query is : jeera hygiene for CDF board
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not False
+2025-05-05 11:04:04.743115
+user query is : chira hygiene for CDF board
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not False
+2025-05-05 11:04:29.929480
+user query is : jeera hygiene for CDF board
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False
+Crew function called with parameters board_name CDF sprint_name None person_name None previous_data_needed_or_not False
+2025-05-05 11:13:12.704416
+user query is : fte FTC utilisation for APS 2 board
+sim_query is : FTE/FTC utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name APS2 sprint_name None person_name None previous_data_needed_or_not False
+2025-05-05 11:17:46.694717
+user query is : fte FTC utilisation for APS 2 board
+sim_query is : FTE/FTC utilization of y board in sprint n
+previous_needed_or_not is : False
+Crew function called with parameters board_name APS2 sprint_name None person_name None previous_data_needed_or_not False
