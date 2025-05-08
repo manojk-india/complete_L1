@@ -31,12 +31,12 @@ def write_to_checkpoint_file(data, file_path='checkpoint.txt'):
 # function that returns the L1 board id for the given board name -- to be done 
 def get_board_id(board_name):
     board_ids = {
-        "cdf": 39,
-        "ebsnf": 38,
-        "tes1": 42,
+        "L1Board1": 39,
+        "L1Board2": 38,
+        "L1Board5": 42,
         "tes2": 43,
-        "aps1": 40,
-        "aps2": 41
+        "L1Board3": 40,
+        "L1Board4": 41
     }
     return board_ids.get(board_name.lower(), None)  # Return None if not found
 
@@ -84,7 +84,7 @@ def get_current_sprint():
 # function that returns the sprint id 
 def get_sprint_id(board_name, sprint_name):
     sprint_ids = {
-        "cdf": {
+        "L1Board1": {
             "sprint 1": 64,
             "sprint 2": 65,
             "sprint 3": 66,
@@ -97,7 +97,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 10": 73,
             "sprint 11": 166,
         },
-        "ebsnf": {
+        "L1Board2": {
             "sprint 1": 54,
             "sprint 2": 55,
             "sprint 3": 56,
@@ -110,7 +110,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 10": 63,
             "sprint 11": 167,
         },
-        "aps1": {
+        "L1Board3": {
             "sprint 1": 74,
             "sprint 2": 78,
             "sprint 3": 79,
@@ -123,7 +123,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 10": 86,
             "sprint 11": 170,
         },
-        "tes1": {
+        "L1Board5": {
             "sprint 1": 76,
             "sprint 2": 96,
             "sprint 3": 97,
@@ -136,9 +136,8 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 10": 104,
             "sprint 11": 168,
 
-        },
-        
-        "aps2": {
+        },       
+        "L1Board4": {
             "sprint 1": 75,
             "sprint 2": 87,
             "sprint 3": 88,
@@ -161,7 +160,7 @@ def get_sprint_name(board_name, sprint_id):
     Returns the sprint name for a given board name and sprint ID.
     """
     sprint_ids = {
-        "cdf": {
+        "L1Board1": {
             "Sprint 1": 64,
             "Sprint 2": 65,
             "Sprint 3": 66,
@@ -174,7 +173,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 10": 73,
             "Sprint 11": 166,
         },
-        "ebsnf": {
+        "L1Board2": {
             "Sprint 1": 54,
             "Sprint 2": 55,
             "Sprint 3": 56,
@@ -187,7 +186,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 10": 63,
             "Sprint 11": 167,
         },
-        "aps1": {
+        "L1Board3": {
             "Sprint 1": 74,
             "Sprint 2": 78,
             "Sprint 3": 79,
@@ -200,7 +199,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 10": 86,
             "Sprint 11": 170,
         },
-        "tes1": {
+        "L1Board5": {
             "Sprint 1": 76,
             "Sprint 2": 96,
             "Sprint 3": 97,
@@ -213,7 +212,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 10": 104,
             "Sprint 11": 168,
         },
-        "aps2": {
+        "L1Board4": {
             "Sprint 1": 75,
             "Sprint 2": 87,
             "Sprint 3": 88,
@@ -296,11 +295,11 @@ def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
 # getting previous sprint ids for the given board name and current sprint id -- mock function for now ..need to feed in data
 def get_previous_sprint_ids(board_name, current_sprint_id):
     dictionary = {
-        "cdf": [64,65,66,67,68,69,70,71,72,73,166],
-        "aps1": [74,78,79,80,81,82,83,84,85,86,170],
-        "aps2": [74,87,88,89,90,91,92,93,94,95,171],	
-        "ebsnf": [54,55,56,57,58,59,60,61,62,63,167],
-        "tes1": [76,96,97,98,99,100,101,102,103,104,168],
+        "L1Board1": [64,65,66,67,68,69,70,71,72,73,166],
+        "L1Board3": [74,78,79,80,81,82,83,84,85,86,170],
+        "L1Board4": [74,87,88,89,90,91,92,93,94,95,171],	
+        "L1Board2": [54,55,56,57,58,59,60,61,62,63,167],
+        "L1Board5": [76,96,97,98,99,100,101,102,103,104,168],
 
         # Add other boards here
     }
@@ -315,11 +314,11 @@ def get_previous_sprint_ids(board_name, current_sprint_id):
 # getting future 2 sprints 
 def get_future_sprint_ids(board_name, current_sprint_id):
     dictionary = {
-        "cdf": [64,65,66,67,68,69,70,71,72,73,166],
-        "aps1": [74,78,79,80,81,82,83,84,85,86,170],
-        "aps2": [74,87,88,89,90,91,92,93,94,95,171],	
-        "ebsnf": [54,55,56,57,58,59,60,61,62,63,167],
-        "tes1": [76,96,97,98,99,100,101,102,103,104,168],
+        "L1Board1": [64,65,66,67,68,69,70,71,72,73,166],
+        "L1Board3": [74,78,79,80,81,82,83,84,85,86,170],
+        "L1Board4": [74,87,88,89,90,91,92,93,94,95,171],	
+        "L1Board2": [54,55,56,57,58,59,60,61,62,63,167],
+        "L1Board5": [76,96,97,98,99,100,101,102,103,104,168],
 
         # Add other boards here
     }
@@ -398,12 +397,13 @@ def embed_query(user_query):
     # This function will take the query and embed it using the LLM model
     # For now, we will just return the query as is
     queries = [
-        "Story points assigned to person x in y board in sprint n",
+        "What is the capacity utilization of person x in y board in sprint n",
         "RTB/CTB utilization of y board in sprint n",
         "RTB/CTB utilization of y person in sprint n",
         "FTE/FTC utilization of y board in sprint n",
         "Backlog health for y board",
         "JIRA hygiene for x board"
+        "Story points assigned to person x in y board in sprint n",
     ]
     model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
     query_embeddings = model.encode(queries, convert_to_tensor=True)
@@ -615,12 +615,12 @@ def extract_code_section(input_file, output_file):
 # Required for PTO data integration
 def get_membership_of_board(board:str):
     board_membership={
-    "CDF": ["Alice","Bob","Rishika","Hari","Apoorva"],
-    "EBSNF": ["Apoorva","David","Pavithra","Alok","Peter"],
-    "TES1": ["Sai","Krithika","David"],
+    "L1Board1": ["Alice","Bob","Rishika","Hari","Apoorva"],
+    "L1Board2": ["Apoorva","David","Pavithra","Alok","Peter"],
+    "L1Board5": ["Sai","Krithika","David"],
     "TES2": ["Seetha","Rasheed","Rachin"],	
-    "APS1": ["Nitish","Noor","Khaleel"],
-    "APS2": ["Vikram","Dube","Ashwin"],
+    "L1Board3": ["Nitish","Noor","Khaleel"],
+    "L1Board4": ["Vikram","Dube","Ashwin"],
     }
 
     return board_membership.get(board.upper(),[])

@@ -1,7 +1,7 @@
 use_case_examples = {
     1: """
-**Note: **" For Story points related query, we need to check the current sprint story points from current.csv and compare it with the average of previous sprints from history.csv."
-**Example Query:** "Story points assigned to Hari in CDF board in sprint 3"
+**Note: **" For capacity utilization related query, we need to check the current sprint story points from current.csv and compare it with the average of previous sprints from history.csv."
+**Example Query:** "What is the capacity utilization of Hari in CDF board in sprint 7"
 #code start
 import pandas as pd
 
@@ -171,11 +171,24 @@ with open("outputs/output.txt", "w") as f:
 
 """,
     6: """
-**Use Case: Jira Hygiene for a Board in Current Sprint**
+**Use Case: Story points use case**
 
-**Example Query:** "Jira hygiene for CDF board"
+**Example Query:** "Story points assigned to Hari in CDF board in sprint 9"
 **Correct Code:**
 #code start
+import pandas as pd
+
+# Load data
+df = pd.read_csv("generated_files/current.csv")         # current sprint data
+
+# Compute total story points for in df dataframe
+current_points = df['story_points'].fillna(0).sum()
+
+# Output
+with open("outputs/output.txt", "w") as f:
+    f.write("Query: Story points assigned to Hari in CDF board in sprint 9 is "+str(current_points))
+    f.write("\n")
+
 #code end
 
 """,
