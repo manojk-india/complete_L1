@@ -172,7 +172,7 @@ async def process_message(message):
     
     await processing(message.content)
 
-    asyncio.sleep(3)
+    await asyncio.sleep(3)
 
     with open("outputs/output.txt", "r") as f:
         content = f.read()

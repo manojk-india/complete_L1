@@ -1,0 +1,7 @@
+Demo video that has to be recorded
+
+1. No of story points assigned to person X in sprint x
+
+2. What is the capacity of person x in sprint X
+
+3. How is the backlog health of X board -- shld also integrate feature readiness

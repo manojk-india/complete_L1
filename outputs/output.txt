@@ -1,2 +1,5 @@
-Query: Story points assigned to Hari in L1Board1 in sprint 9 is 4.0
+Query: Capacity of Hari in L1Board1 in sprint 10
+Current sprint story points: 4.0
+Average of previous sprints: 3.00
+Capacity utilization status: Overutilized
 
