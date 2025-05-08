@@ -1,12 +1,12 @@
 import pandas as pd
 
 # Load data
-df = pd.read_csv("generated_files/current.csv")         # current sprint data
+df = pd.read_csv("generated_files/current.csv")
 
-# Compute total story points for in df dataframe
-current_points = df['story_points'].fillna(0).sum()
+# Compute total story points for Hari in ABC 1 board
+story_points = df['story_points'].fillna(0).sum()
 
-# Output
+# Output the result
 with open("outputs/output.txt", "w") as f:
-    f.write("Query: Story points assigned to Hari in L1Board1 in sprint 9 is " + str(current_points))
-    f.write("\n")
+    f.write("Query: story points assigned to Hari in ABC 1 board\n")
+    f.write(f"Total story points: {story_points}\n")
