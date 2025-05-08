@@ -1,5 +1,3 @@
-Query: Capacity of Hari in L1Board1 in sprint 10
-Current sprint story points: 4.0
-Average of previous sprints: 3.00
-Capacity utilization status: Overutilized
+Query: story points assigned to Hari in ABC 1 board
+Total story points: 4.0
 
