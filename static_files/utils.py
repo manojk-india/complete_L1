@@ -11,17 +11,17 @@ from crewai import Process, Agent, Task, Crew, LLM
 import pandas as pd
 from datetime import datetime
 
-def find_present_words_case_insensitive(query):
-    # Convert query to lower case for case-insensitive comparison
-    query_lower = query.lower()
+# def find_present_words_case_insensitive(query):
+#     # Convert query to lower case for case-insensitive comparison
+#     query_lower = query.lower()
 
-    word_list=["cdf","ebsnf","tes1","tes2","dis1","dis2"]
-    # Collect words that are present in the query (case-insensitive)
-    found = [word for word in word_list if word.lower() in query_lower]
-    if found:
-        return found[0]
-    else:
-        return None
+#     word_list=["cdf","ebsnf","tes1","tes2","dis1","dis2"]
+#     # Collect words that are present in the query (case-insensitive)
+#     found = [word for word in word_list if word.lower() in query_lower]
+#     if found:
+#         return found[0]
+#     else:
+#         return None
     
 # writing it into checkpoint file for better debugging 
 def write_to_checkpoint_file(data, file_path='checkpoint.txt'):
@@ -31,12 +31,12 @@ def write_to_checkpoint_file(data, file_path='checkpoint.txt'):
 # function that returns the L1 board id for the given board name -- to be done 
 def get_board_id(board_name):
     board_ids = {
-        "L1Board1": 39,
-        "L1Board2": 38,
-        "L1Board5": 42,
+        "l1board1": 39,
+        "l1board2": 38,
+        "l1board5": 42,
         "tes2": 43,
-        "L1Board3": 40,
-        "L1Board4": 41
+        "l1board3": 40,
+        "l1board4": 41
     }
     return board_ids.get(board_name.lower(), None)  # Return None if not found
 
@@ -84,7 +84,7 @@ def get_current_sprint():
 # function that returns the sprint id 
 def get_sprint_id(board_name, sprint_name):
     sprint_ids = {
-        "L1Board1": {
+        "l1board1": {
             "sprint 1": 64,
             "sprint 2": 65,
             "sprint 3": 66,
@@ -97,7 +97,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 10": 73,
             "sprint 11": 166,
         },
-        "L1Board2": {
+        "l1board2": {
             "sprint 1": 54,
             "sprint 2": 55,
             "sprint 3": 56,
@@ -110,7 +110,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 10": 63,
             "sprint 11": 167,
         },
-        "L1Board3": {
+        "l1board3": {
             "sprint 1": 74,
             "sprint 2": 78,
             "sprint 3": 79,
@@ -123,7 +123,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 10": 86,
             "sprint 11": 170,
         },
-        "L1Board5": {
+        "l1board5": {
             "sprint 1": 76,
             "sprint 2": 96,
             "sprint 3": 97,
@@ -137,7 +137,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 11": 168,
 
         },       
-        "L1Board4": {
+        "l1board4": {
             "sprint 1": 75,
             "sprint 2": 87,
             "sprint 3": 88,
@@ -160,7 +160,7 @@ def get_sprint_name(board_name, sprint_id):
     Returns the sprint name for a given board name and sprint ID.
     """
     sprint_ids = {
-        "L1Board1": {
+        "l1board1": {
             "Sprint 1": 64,
             "Sprint 2": 65,
             "Sprint 3": 66,
@@ -173,7 +173,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 10": 73,
             "Sprint 11": 166,
         },
-        "L1Board2": {
+        "l1board2": {
             "Sprint 1": 54,
             "Sprint 2": 55,
             "Sprint 3": 56,
@@ -186,7 +186,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 10": 63,
             "Sprint 11": 167,
         },
-        "L1Board3": {
+        "l1board3": {
             "Sprint 1": 74,
             "Sprint 2": 78,
             "Sprint 3": 79,
@@ -199,7 +199,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 10": 86,
             "Sprint 11": 170,
         },
-        "L1Board5": {
+        "l1board5": {
             "Sprint 1": 76,
             "Sprint 2": 96,
             "Sprint 3": 97,
@@ -212,7 +212,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 10": 104,
             "Sprint 11": 168,
         },
-        "L1Board4": {
+        "l1board4": {
             "Sprint 1": 75,
             "Sprint 2": 87,
             "Sprint 3": 88,
@@ -295,11 +295,11 @@ def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
 # getting previous sprint ids for the given board name and current sprint id -- mock function for now ..need to feed in data
 def get_previous_sprint_ids(board_name, current_sprint_id):
     dictionary = {
-        "L1Board1": [64,65,66,67,68,69,70,71,72,73,166],
-        "L1Board3": [74,78,79,80,81,82,83,84,85,86,170],
-        "L1Board4": [74,87,88,89,90,91,92,93,94,95,171],	
-        "L1Board2": [54,55,56,57,58,59,60,61,62,63,167],
-        "L1Board5": [76,96,97,98,99,100,101,102,103,104,168],
+        "l1board1": [64,65,66,67,68,69,70,71,72,73,166],
+        "l1board3": [74,78,79,80,81,82,83,84,85,86,170],
+        "l1board4": [74,87,88,89,90,91,92,93,94,95,171],	
+        "l1board2": [54,55,56,57,58,59,60,61,62,63,167],
+        "l1board5": [76,96,97,98,99,100,101,102,103,104,168],
 
         # Add other boards here
     }
@@ -314,11 +314,11 @@ def get_previous_sprint_ids(board_name, current_sprint_id):
 # getting future 2 sprints 
 def get_future_sprint_ids(board_name, current_sprint_id):
     dictionary = {
-        "L1Board1": [64,65,66,67,68,69,70,71,72,73,166],
-        "L1Board3": [74,78,79,80,81,82,83,84,85,86,170],
-        "L1Board4": [74,87,88,89,90,91,92,93,94,95,171],	
-        "L1Board2": [54,55,56,57,58,59,60,61,62,63,167],
-        "L1Board5": [76,96,97,98,99,100,101,102,103,104,168],
+        "l1board1": [64,65,66,67,68,69,70,71,72,73,166],
+        "l1board3": [74,78,79,80,81,82,83,84,85,86,170],
+        "l1board4": [74,87,88,89,90,91,92,93,94,95,171],	
+        "l1board2": [54,55,56,57,58,59,60,61,62,63,167],
+        "l1board5": [76,96,97,98,99,100,101,102,103,104,168],
 
         # Add other boards here
     }
@@ -402,7 +402,7 @@ def embed_query(user_query):
         "RTB/CTB utilization of y person in sprint n",
         "FTE/FTC utilization of y board in sprint n",
         "Backlog health for y board",
-        "JIRA hygiene for x board"
+        "JIRA hygiene for x board",
         "Story points assigned to person x in y board in sprint n",
     ]
     model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
@@ -420,7 +420,10 @@ def embed_query(user_query):
         4: False,
         5: True,
         6: False,
+        7: False
     }
+
+    write_to_checkpoint_file("matched query is : "+str(queries[best_match_idx]))
 
     return queries[best_match_idx], scores[0][best_match_idx].item(),value+1,previous_needed_or_not_dict[value+1]
 

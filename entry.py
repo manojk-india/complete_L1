@@ -96,7 +96,6 @@ async def entrypoint(Query:str) -> str:
                             
                         f.write(f"Name: {i} -- Leave days: {leaves} in {j} \n")
                 f.write("\n")
-
     else:
         with open("outputs/output.txt", "w") as f:
            pass

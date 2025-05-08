@@ -170,7 +170,7 @@ with open("outputs/output.txt", "w") as f:
 
 
 """,
-    6: """
+    7: """
 **Use Case: Story points use case**
 
 **Example Query:** "Story points assigned to Hari in CDF board in sprint 9"

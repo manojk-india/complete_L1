@@ -1,14 +1,12 @@
 import pandas as pd
 
-# Load current sprint data
-df = pd.read_csv("generated_files/current.csv")
+# Load data
+df = pd.read_csv("generated_files/current.csv")         # current sprint data
 
-# Calculate FTE and FTC story points for APS 2 board
-fte_points = df[df['employment_type'] == 'FTE']['story_points'].fillna(0).sum()
-ftc_points = df[df['employment_type'] == 'FTC']['story_points'].fillna(0).sum()
+# Compute total story points for in df dataframe
+current_points = df['story_points'].fillna(0).sum()
 
-# Output results
+# Output
 with open("outputs/output.txt", "w") as f:
-    f.write("Query: fte FTC utilisation for APS 2 board\n")
-    f.write(f"FTE story points: {fte_points}\n")
-    f.write(f"FTC story points: {ftc_points}\n")
+    f.write("Query: Story points assigned to Hari in L1Board1 in sprint 9 is " + str(current_points))
+    f.write("\n")

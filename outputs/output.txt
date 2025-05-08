@@ -1,4 +1,2 @@
-Query: fte FTC utilisation for APS 2 board
-FTE story points: 10.0
-FTC story points: 16.0
+Query: Story points assigned to Hari in L1Board1 in sprint 9 is 4.0
 
