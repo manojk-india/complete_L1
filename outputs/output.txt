@@ -1,7 +1,1 @@
-Query: Backlog health for ABC3 board
-Average velocity from previous sprints: 22.50
-APS1 Sprint 11 story points: 27.0
-APS1 Sprint 11 backlog status: Overutilized
-APS1 Sprint 12 story points: 25.0
-APS1 Sprint 12 backlog status: Healthy
-
+ Below you can find low quality acceptance crieteria report 

@@ -4,7 +4,7 @@ from matplotlib.patches import Rectangle, FancyBboxPatch
 import matplotlib.colors as mcolors
 from matplotlib import patheffects
 import numpy as np
-from static_files.utils import write_to_checkpoint_file
+# from static_files.utils import write_to_checkpoint_file
 
 def visualize_missing_data(csv_file_path, output_image_path='outputs/jira_hygiene_dashboard.png'):
     """
@@ -147,7 +147,7 @@ def visualize_missing_data(csv_file_path, output_image_path='outputs/jira_hygien
     plt.close()
     
     print(f"Visualization saved to {output_image_path}")
-    write_to_checkpoint_file("visualization saved to ",output_image_path)
+#     write_to_checkpoint_file("visualization saved to ",output_image_path)
 
 
 
@@ -226,7 +226,7 @@ def visualize_missing_data_with_low_quality_acceptance(csv_file_path, output_ima
             fontsize=13, color=colors['text'], alpha=0.8)
     
     # Metrics container
-    metrics_box = FancyBboxPatch((0.1, 0.17), 0.8, 0.55,
+    metrics_box = FancyBboxPatch((0.1, 0.17), 0.3, 0.55,
                                boxstyle="round,pad=0.02",
                                facecolor='#ffffff',
                                edgecolor=colors['border'],
@@ -235,7 +235,7 @@ def visualize_missing_data_with_low_quality_acceptance(csv_file_path, output_ima
     ax.add_patch(metrics_box)
     
     # Draw the metrics for each column
-    cell_height = 0.06
+    cell_height = 0.05
     start_y = 0.7
     
     for i, (col, count) in enumerate(missing_counts.items()):
@@ -294,5 +294,8 @@ def visualize_missing_data_with_low_quality_acceptance(csv_file_path, output_ima
     plt.close()
     
     print(f"Visualization saved to {output_image_path}")
-    write_to_checkpoint_file("visualization saved to ",output_image_path)
+#     write_to_checkpoint_file("visualization saved to ",output_image_path)
 
+
+
+visualize_missing_data_with_low_quality_acceptance("generated_files/poor_acceptance.csv")

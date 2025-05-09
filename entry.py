@@ -12,7 +12,7 @@ from crews import *
 from static_files.hygiene import *
 
 # main entry point file which will be used by chainLit
-async def entrypoint(Query:str) -> str:
+def entrypoint(Query:str) -> str:
     # loading the environment variables from the .env file
     load_dotenv()
     write_to_checkpoint_file("---------------------------------------------------------------------------------------")
@@ -110,19 +110,20 @@ async def entrypoint(Query:str) -> str:
         # what are the rows that lack good quality acceptance_crieteria
         save_rows_with_low_quality_acceptance_crieteria()
 
+        # flagging low quality acceptance crieteria rows
         process_csv()
+        
         visualize_missing_data_with_low_quality_acceptance('generated_files/current.csv')
 
         # PDF report creation
-        # create_acceptance_improvement_report()
+        create_acceptance_improvement_report()
     else:
         visualize_missing_data('generated_files/current.csv')
 
 
+# entrypoint("No of story points assigned to Hari in abc1") -- working fine 
 
-
-
-
+entrypoint("Jira Hygiene of abc1 board")
 
 
 

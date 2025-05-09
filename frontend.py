@@ -212,18 +212,18 @@ async def process_message(message):
     ).send()
 
     try:
-        # df2= pd.read_csv("generated_files/poor_acceptance.csv") 
+        df2= pd.read_csv("generated_files/poor_acceptance.csv") 
 
-        # await cl.Message(
-        #     content="Here's the list of Low quality acceptance crieterias",
-        #     elements=[
-        #         cl.Dataframe(
-        #             data=df2, 
-        #             display="inline",
-        #             name="JIRA Data",
-        #         )
-        #     ]
-        #     ).send()
+        await cl.Message(
+            content="Here's the list of Low quality acceptance crieterias",
+            elements=[
+                cl.Dataframe(
+                    data=df2, 
+                    display="inline",
+                    name="JIRA Data",
+                )
+            ]
+            ).send()
         
         output_file = "outputs/acceptance_crieteria_report.pdf"
         if output_file and os.path.exists(output_file):
