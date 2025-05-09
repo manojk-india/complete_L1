@@ -1,3 +1,7 @@
-Query: story points assigned to Hari in ABC 1 board
-Total story points: 4.0
+Query: Backlog health for ABC3 board
+Average velocity from previous sprints: 22.50
+APS1 Sprint 11 story points: 27.0
+APS1 Sprint 11 backlog status: Overutilized
+APS1 Sprint 12 story points: 25.0
+APS1 Sprint 12 backlog status: Healthy
 

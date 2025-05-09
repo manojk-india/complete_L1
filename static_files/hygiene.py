@@ -4,6 +4,7 @@ from matplotlib.patches import Rectangle, FancyBboxPatch
 import matplotlib.colors as mcolors
 from matplotlib import patheffects
 import numpy as np
+from static_files.utils import write_to_checkpoint_file
 
 def visualize_missing_data(csv_file_path, output_image_path='outputs/jira_hygiene_dashboard.png'):
     """
@@ -146,3 +147,5 @@ def visualize_missing_data(csv_file_path, output_image_path='outputs/jira_hygien
     plt.close()
     
     print(f"Visualization saved to {output_image_path}")
+    write_to_checkpoint_file("visualization saved to ",output_image_path)
+

@@ -100,4 +100,62 @@ def pandas_query_crew(query,idx):
         f.write(str(result))
     extract_code_section( "outputs/panda.py","outputs/output.py")
     os.system("python outputs/output.py")
+    write_to_checkpoint_file("pandas query crew called")
 
+
+################################################----STORY READINESS CREW-----###########################################################
+
+# Define the evaluation agent
+criteria_evaluator = Agent(
+    role="Acceptance Criteria Quality Evaluator",
+    goal="Evaluate if acceptance criteria is well-documented and understandable by non-technical users",
+    backstory="""You are an expert in User Story quality assessment with deep knowledge of 
+    acceptance criteria best practices. You specialize in evaluating the clarity, 
+    completeness and accessibility of Given/When/Then formatted requirements.""",
+    llm=llm,
+    verbose=True,
+)
+
+# Define the evaluation task with a detailed prompt
+evaluation_task = Task(
+    description="""
+    Note: Just classify ..no function calling is required 
+    Evaluate the quality of the following acceptance criteria 
+    
+
+    {acceptance_criteria}
+    
+    By understanding acceptance crieteria and analyzing it do the following 
+    #) classification : Well Documented or Not Well Documented
+    #) strengths : ["strength1", "strength2"...],
+    #) improvement_areas: ["area1", "area2"...],
+    #) revised_version: "Proper acceptance crieteria without missing anything in Given When Then format"
+
+    While classifying it as well documented or not consider th below 
+    First of all check whether it is in Given When Then format or not...if not directly classify it as Not Well Documented
+    Then even if it is Given When Then format .....check whether its written in a wells understandable way and then classify accordingly 
+    
+    Provide specific feedback on strengths and areas for improvement.
+
+    Even if you feel the acceptance crieteria is okay just classify it as well documneted . only classify it as poor only if you feel it is very poor
+
+    Note : Dont miss out any parameters mentionedd at all.....
+    """,
+    agent=criteria_evaluator,
+    expected_output="""
+        "classification": Well Documented or Not Well Documented
+        "strengths": ["strength1", "strength2"...],
+        "improvement_areas": ["area1", "area2"...],
+        "revised_version": "Proper acceptance crieteria without missing anything in Given When Then format"
+    """,
+    output_pydantic=Evaluated_metrics
+)
+
+
+
+# Create the crew
+acceptance_criteria_crew = Crew(
+    agents=[criteria_evaluator],
+    tasks=[evaluation_task],
+    verbose=True
+)

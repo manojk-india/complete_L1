@@ -15,6 +15,7 @@ from static_files.hygiene import visualize_missing_data
 async def entrypoint(Query:str) -> str:
     # loading the environment variables from the .env file
     load_dotenv()
+    write_to_checkpoint_file("---------------------------------------------------------------------------------------")
 
     # classify the user query as some predefined categories
     sim_query,sim,idx,previous_needed_or_not=embed_query(Query)
@@ -26,6 +27,7 @@ async def entrypoint(Query:str) -> str:
 
     # calling the data getter crew to extract the relevant information from the user query
     result=parameter_extracter_crew(Query)
+
     board_name=result["board_name"].replace(" ","")
     print("board name is : ",board_name)
     # calling the main API function 
@@ -73,6 +75,8 @@ async def entrypoint(Query:str) -> str:
         members=get_membership_of_board(board_name)
     else:
         members=[result["person_name"]]
+    write_to_checkpoint_file("sprint name(for pto data):" +str(sprint_name))
+    write_to_checkpoint_file("members:" +str(members))
 
     if(idx!=6):
         # PTO not required for JIRA hygiene case

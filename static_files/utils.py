@@ -96,6 +96,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 9": 72,
             "sprint 10": 73,
             "sprint 11": 166,
+            "sprint 12": 199
         },
         "abc2": {
             "sprint 1": 54,
@@ -109,6 +110,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 9": 62,
             "sprint 10": 63,
             "sprint 11": 167,
+            "sprint 12": 200
         },
         "abc3": {
             "sprint 1": 74,
@@ -122,6 +124,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 9": 85,
             "sprint 10": 86,
             "sprint 11": 170,
+            "sprint 12": 201
         },
         "abc5": {
             "sprint 1": 76,
@@ -135,6 +138,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 9": 103,
             "sprint 10": 104,
             "sprint 11": 168,
+            "sprint 12": 203
 
         },       
         "abc4": {
@@ -149,6 +153,7 @@ def get_sprint_id(board_name, sprint_name):
             "sprint 9": 94,
             "sprint 10": 95,
             "sprint 11": 171,
+            "sprint 12": 202
         }  # Add other boards and their sprints here
     }
    
@@ -172,6 +177,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 9": 72,
             "Sprint 10": 73,
             "Sprint 11": 166,
+            "Sprint 12": 199
         },
         "abc2": {
             "Sprint 1": 54,
@@ -185,6 +191,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 9": 62,
             "Sprint 10": 63,
             "Sprint 11": 167,
+            "Sprint 12": 200
         },
         "abc3": {
             "Sprint 1": 74,
@@ -198,6 +205,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 9": 85,
             "Sprint 10": 86,
             "Sprint 11": 170,
+            "Sprint 12": 201
         },
         "abc5": {
             "Sprint 1": 76,
@@ -211,6 +219,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 9": 103,
             "Sprint 10": 104,
             "Sprint 11": 168,
+            "Sprint 12": 203
         },
         "abc4": {
             "Sprint 1": 75,
@@ -224,6 +233,7 @@ def get_sprint_name(board_name, sprint_id):
             "Sprint 9": 94,
             "Sprint 10": 95,
             "Sprint 11": 171,
+            "Sprint 12": 202
         }
     }
 
@@ -238,6 +248,9 @@ def get_sprint_name(board_name, sprint_id):
 # api caller helper function for tool calling
 def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
     url = f"https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/{sprint_id}/issue"
+    write_to_checkpoint_file("api called with: sprint_id - "+str(sprint_id)+" jql - "+str(jql)+" output_file - "+str(output_file))
+    write_to_checkpoint_file("URL is : "+str(url))
+
     
     # Authentication
     email = os.getenv('JIRA_EMAIL')
@@ -295,11 +308,11 @@ def api_helper(sprint_id: int, jql:str, output_file: str) -> None:
 # getting previous sprint ids for the given board name and current sprint id -- mock function for now ..need to feed in data
 def get_previous_sprint_ids(board_name, current_sprint_id):
     dictionary = {
-        "abc1": [64,65,66,67,68,69,70,71,72,73,166],
-        "abc3": [74,78,79,80,81,82,83,84,85,86,170],
-        "abc4": [74,87,88,89,90,91,92,93,94,95,171],	
-        "abc2": [54,55,56,57,58,59,60,61,62,63,167],
-        "abc5": [76,96,97,98,99,100,101,102,103,104,168],
+        "abc1": [64,65,66,67,68,69,70,71,72,73,166,199],
+        "abc3": [74,78,79,80,81,82,83,84,85,86,170,201],
+        "abc4": [74,87,88,89,90,91,92,93,94,95,171,202],	
+        "abc2": [54,55,56,57,58,59,60,61,62,63,167,200],
+        "abc5": [76,96,97,98,99,100,101,102,103,104,168,203],
 
         # Add other boards here
     }
@@ -314,11 +327,11 @@ def get_previous_sprint_ids(board_name, current_sprint_id):
 # getting future 2 sprints 
 def get_future_sprint_ids(board_name, current_sprint_id):
     dictionary = {
-        "abc1": [64,65,66,67,68,69,70,71,72,73,166],
-        "abc3": [74,78,79,80,81,82,83,84,85,86,170],
-        "abc4": [74,87,88,89,90,91,92,93,94,95,171],	
-        "abc2": [54,55,56,57,58,59,60,61,62,63,167],
-        "abc5": [76,96,97,98,99,100,101,102,103,104,168],
+        "abc1": [64,65,66,67,68,69,70,71,72,73,166,199],
+        "abc3": [74,78,79,80,81,82,83,84,85,86,170,201],
+        "abc4": [74,87,88,89,90,91,92,93,94,95,171,202],	
+        "abc2": [54,55,56,57,58,59,60,61,62,63,167,200],
+        "abc5": [76,96,97,98,99,100,101,102,103,104,168,203],
 
         # Add other boards here
     }
@@ -326,7 +339,7 @@ def get_future_sprint_ids(board_name, current_sprint_id):
     return [dictionary.get(board_name.lower())[idx+1],dictionary.get(board_name.lower())[idx+2]]
     
 
-# coversting json to csv
+# converting json to csv
 def json_to_csv(json_file,csv_file) -> None:
     """
     Convert Jira features JSON to CSV with specified fields
@@ -436,7 +449,7 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx
         sprint (str, optional): The name of the sprint. Defaults to None. eg. sprint 1
         person (str, optional): The name of the person. Defaults to None. eg. manoj
     """
-    write_to_checkpoint_file("Crew function called with parameters "+"board_name "+str(board_name)+" sprint_name "+str(sprint)+" person_name "+str(person)+" previous_data_needed_or_not "+str(previous_data_needed_or_not))
+    write_to_checkpoint_file("get_L1_board_data called with parameters "+"board_name "+str(board_name)+" sprint_name "+str(sprint)+" person_name "+str(person)+" previous_data_needed_or_not "+str(previous_data_needed_or_not))
  
 
     if(sprint is None):
@@ -534,6 +547,8 @@ def add_rtb_ctb_column(df: pd.DataFrame):
     cache = {}  # Initialize an empty dictionary for caching
     df['requested_by'] = df['parent_key'].apply(lambda key: fetch_requested_by(key, cache))
     df.to_csv("generated_files/current.csv", index=False) 
+    write_to_checkpoint_file("added rtb/ctb column to the current.csv file")
+
 
 #FTE/FTC column addition function
 def add_employment_type():
@@ -573,6 +588,8 @@ def add_employment_type():
     df.to_csv(output_path, index=False)
 
     print(f"Updated file saved to {output_path}")
+    write_to_checkpoint_file("added fte/ftc columns to current.csv file")	
+
 
 
 # leave calculater function for the given person and sprint name
@@ -626,7 +643,7 @@ def get_membership_of_board(board:str):
     "abc4": ["Vikram","Dube","Ashwin"],
     }
 
-    return board_membership.get(board.upper(),[])
+    return board_membership.get(board.lower(),[])
 
 
 def clear_empty_labels():
