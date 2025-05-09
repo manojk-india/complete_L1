@@ -191,6 +191,7 @@ with open("outputs/output.txt", "w") as f:
         sprint=sprint.split(" ", 1)[1]
         f.write("str(sprint)+" story points:" +str(sprint_points))
         f.write("str(sprint)+" backlog status:"+str(utilization))
+        f.write(" Below you can find low quality acceptance crieteria report ")
 
 #code end
 

@@ -159,3 +159,76 @@ acceptance_criteria_crew = Crew(
     tasks=[evaluation_task],
     verbose=True
 )
+
+# Function to evaluate acceptance criteria
+def evaluate_acceptance_criteria(acceptance_criteria):
+    result=acceptance_criteria_crew.kickoff(inputs={"acceptance_criteria": acceptance_criteria})
+    return result["classification"], result["strengths"], result["improvement_areas"], result["revised_version"]
+
+
+
+
+
+# validation function for acceptance criteria 
+def process_evaluations():
+    """
+    Process each row in the CSV file to evaluate acceptance criteria and summaries.
+    
+    Args:
+        csv_file: Path to the input CSV file
+        output_csv: Path to save the output CSV file
+    """
+    csv_file="generated_files/current.csv"
+    output_csv="generated_files/current.csv"
+    # Load the CSV file with proper error handling
+    try:
+        df = pd.read_csv(csv_file)
+        print(f"Successfully loaded CSV with {len(df)} rows")
+    except FileNotFoundError:
+        print(f"Error: File '{csv_file}' not found. Please check the file path.")
+        return
+    except Exception as e:
+        print(f"Error loading CSV: {str(e)}")
+        return
+    
+    # Create empty result columns
+    df["acceptance_result"] = ""
+    df["acceptance_improvement"] = None
+    
+    # Process each row
+    total_rows = len(df)
+    for index, row in df.iterrows():
+        try:
+            # Progress indicator
+            if index % 10 == 0:
+                print(f"Processing row {index}/{total_rows}...")
+            
+            # Skip if required columns are missing
+            if pd.isna(row.get('acceptance_crieteria', None)):
+                continue
+                
+            # Evaluate acceptance criteria if present
+            if not pd.isna(row.get('acceptance_crieteria', None)):
+                acceptance_result = evaluate_acceptance_criteria(row['acceptance_crieteria'])
+                df.at[index, "acceptance_result"] = acceptance_result[0]
+                df.at[index, "acceptance_improvement"] = {
+                    'strengths': acceptance_result[1],
+                    'improvement_areas': acceptance_result[2],
+                    'revised_version': acceptance_result[3]
+                }
+                
+        except Exception as e:
+            print(f"Error processing row {index}: {str(e)}")
+    
+    # Save to new CSV
+    try:
+        df.to_csv(output_csv, index=False)
+        print(f"Successfully saved results to {output_csv}")
+        return output_csv
+    except Exception as e:
+        print(f"Error saving CSV: {str(e)}")
+        return None
+    
+
+
+    

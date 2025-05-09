@@ -170,7 +170,7 @@ async def process_audio():
 async def process_message(message):
     """Main message processing handler"""
     
-    await processing(message.content)
+    # await processing(message.content)
 
     await asyncio.sleep(3)
 
@@ -210,6 +210,29 @@ async def process_message(message):
         content="Jira Hygiene Dashboard",
         elements=[image1],
     ).send()
+
+    try:
+        # df2= pd.read_csv("generated_files/poor_acceptance.csv") 
+
+        # await cl.Message(
+        #     content="Here's the list of Low quality acceptance crieterias",
+        #     elements=[
+        #         cl.Dataframe(
+        #             data=df2, 
+        #             display="inline",
+        #             name="JIRA Data",
+        #         )
+        #     ]
+        #     ).send()
+        
+        output_file = "outputs/acceptance_crieteria_report.pdf"
+        if output_file and os.path.exists(output_file):
+                        await cl.Message(
+                            content="Download report here!.",
+                            elements=[cl.File(name=os.path.basename(output_file), path=output_file)]
+                        ).send()
+    except:
+        pass
 
 
 

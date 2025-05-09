@@ -7,21 +7,12 @@ import requests
 import json
 import os
 from requests.auth import HTTPBasicAuth
-from crewai import Process, Agent, Task, Crew, LLM
 import pandas as pd
 from datetime import datetime
+# from fpdf import FPDF
+# import ast
 
-# def find_present_words_case_insensitive(query):
-#     # Convert query to lower case for case-insensitive comparison
-#     query_lower = query.lower()
 
-#     word_list=["cdf","ebsnf","tes1","tes2","dis1","dis2"]
-#     # Collect words that are present in the query (case-insensitive)
-#     found = [word for word in word_list if word.lower() in query_lower]
-#     if found:
-#         return found[0]
-#     else:
-#         return None
     
 # writing it into checkpoint file for better debugging 
 def write_to_checkpoint_file(data, file_path='checkpoint.txt'):
@@ -469,6 +460,8 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx
         os.remove("generated_files/history.json")
         os.remove("generated_files/current.csv")
         os.remove("generated_files/history.csv")
+        os.remove("generated_files/poor_acceptance.csv")
+        # should remove the PDF
         print("generated_files removed successfully")
     except OSError:
         pass
@@ -665,3 +658,157 @@ def restore_empty_labels():
     df.loc[df['labels'] == '', 'labels'] = '[]'  # Replace empty string with '[]'
     df.to_csv(file_path, index=False)
     print("Restored empty labels to [].")
+
+# This function will be used when user asks abt some missing column
+def save_rows_with_low_quality_acceptance_crieteria() -> None:
+    """
+    Save rows to a new CSV where the specified column is empty or null.
+
+    Args:
+        csv_input: Path to the input CSV file.
+        column_name: Column name to check for empty/null values.
+        csv_output: Path to save the filtered CSV file.
+    """
+    csv_input="generated_files/current.csv"
+    csv_output="generated_files/low_qulaity_acceptance.csv"
+
+    df = pd.read_csv(csv_input)
+
+
+    acceptance_issue = df['Acceptance_result'].isna() | (df['Acceptance_result'] == 'Not Well Documented')
+    new_df=df[acceptance_issue]
+    new_df.to_csv(csv_output, index=False)
+
+
+def process_csv():
+    # Read the CSV file
+    file_path="generated_files/current.csv"
+    output_path="generated_files/poor_acceptance.csv"
+    df = pd.read_csv(file_path)
+
+    # Apply the condition
+    df['quality_check'] = df['acceptance_crieteria'].apply(
+        lambda x: '' if str(x).strip() == 'Not Well Documented' else 1
+    )
+
+    # Save the modified CSV
+    df.to_csv(output_path, index=False)
+    print(f"Processed file saved to {output_path}")
+
+
+
+# # function for creating PDfs
+# def clean_latin1(text):
+#     if not isinstance(text, str):
+#         return ''
+#     replacements = {
+#         '\u2018': "'", '\u2019': "'", '\u201c': '"', '\u201d': '"',
+#         '\u2013': '-', '\u2014': '-', '\u2026': '...',
+#     }
+#     for k, v in replacements.items():
+#         text = text.replace(k, v)
+#     return text.encode('latin-1', 'replace').decode('latin-1')
+
+
+# class PDFReport1(FPDF):
+#     def header(self):
+#         # 1. Red "WELLS FARGO" strip at the very top
+#         self.set_y(0)
+#         self.set_fill_color(206, 17, 38)  # Wells Fargo red
+#         self.rect(0, 0, self.w, 18, 'F')  # Red strip: height 18 units
+
+#         self.set_font('helvetica', 'B', 16)
+#         self.set_text_color(255, 255, 255)  # White text
+#         self.set_xy(0, 3)
+#         self.cell(self.w, 12, "WELLS FARGO", border=0, ln=1, align='C')
+
+#         # 2. Thin yellow strip immediately below
+#         self.set_y(18)
+#         self.set_fill_color(255, 205, 0)  # Yellow
+#         self.rect(0, 18, self.w, 3, 'F')  # Yellow strip: height 3 units
+
+#         self.ln(3)
+#         self.set_font('helvetica', 'B', 15)
+#         self.set_text_color(0, 0, 0)
+#         self.cell(0, 12, "Acceptance_crieteria_Report", ln=1, align='C')
+#         self.ln(10)
+
+#         self.set_y(40)  # This just ensures the content starts below the strips
+
+#     def footer(self):
+#         self.set_y(-15)
+#         self.set_font('helvetica', 'I', 8)
+#         self.cell(0, 10, f'Page {self.page_no()}', 0, 0, 'C')
+
+# # acceptance crieteria report PDF 
+# def create_acceptance_improvement_report():
+#     csv_file="generated_files/current.csv"
+#     pdf_file="outputs/acceptance_crieteria_report.pdf"
+#     df = pd.read_csv(csv_file)
+
+#     pdf = PDFReport1()
+#     pdf.set_auto_page_break(auto=True, margin=15)
+#     pdf.add_page()
+
+#     pdf.set_font('helvetica', '', 11)  # Use built-in font
+
+
+#     for idx, row in df.iterrows():
+#         pdf.set_font('helvetica', 'B', 12)
+#         pdf.cell(0, 10, clean_latin1(f"Feature Key: {row.get('key', '')}"), ln=True)
+#         pdf.set_font('helvetica', '', 11)
+
+#         pdf.multi_cell(0, 8, clean_latin1(f"Summary: {row.get('summary', '')}"))
+#         pdf.ln(1)
+#         pdf.multi_cell(0, 8, clean_latin1(f"Description: {row.get('description', '')}"))
+#         pdf.ln(1)
+#         pdf.multi_cell(0, 8, clean_latin1(f"Acceptance Criteria: {row.get('acceptance_crieteria', '')}"))
+#         pdf.ln(5)
+
+#         improvement_str = row.get('acceptance_improvement', '{}')
+#         try:
+#             improvement_dict = ast.literal_eval(improvement_str) if isinstance(improvement_str, str) else {}
+#         except Exception:
+#             improvement_dict = {}
+
+#         strengths = improvement_dict.get('strengths', [])
+#         improvement_areas = improvement_dict.get('improvement_areas', [])
+#         revised_version = improvement_dict.get('revised_version', '')
+
+#         pdf.set_font('helvetica', 'B', 11)
+#         pdf.cell(0, 10, clean_latin1('Strengths:'), ln=True)
+#         pdf.set_font('helvetica', '', 11)
+#         if strengths:
+#             for s in strengths:
+#                 pdf.multi_cell(0, 8, clean_latin1(f"- {s}"))
+#         else:
+#             pdf.cell(0, 8, 'None', ln=True)
+
+#         pdf.ln(2)
+#         pdf.set_font('helvetica', 'B', 11)
+#         pdf.cell(0, 10, clean_latin1('Improvement Areas:'), ln=True)
+#         pdf.set_font('helvetica', '', 11)
+#         if improvement_areas:
+#             for imp in improvement_areas:
+#                 pdf.multi_cell(0, 8, clean_latin1(f"- {imp}"))
+#         else:
+#             pdf.cell(0, 8, 'None', ln=True)
+
+#         pdf.ln(2)
+#         pdf.set_font('helvetica', 'B', 11)
+#         pdf.cell(0, 10, clean_latin1('Revised Version:'), ln=True)
+#         pdf.set_font('helvetica', '', 11)
+#         if revised_version:
+#             pdf.multi_cell(0, 8, clean_latin1(revised_version))
+#         else:
+#             pdf.cell(0, 8, 'None', ln=True)
+
+#         pdf.ln(10)
+#         pdf.line(10, pdf.get_y(), 200, pdf.get_y())
+#         pdf.ln(10)
+
+#     pdf.output(pdf_file)
+
+
+
+
