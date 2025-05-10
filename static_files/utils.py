@@ -10,6 +10,7 @@ from requests.auth import HTTPBasicAuth
 import pandas as pd
 from datetime import datetime
 from fpdf import FPDF
+import numpy as np
 # import ast
 
 
@@ -454,17 +455,13 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx
     else:
         jql=None
 
-    
-    try:
-        os.remove("generated_files/current.json")
-        os.remove("generated_files/history.json")
-        os.remove("generated_files/current.csv")
-        os.remove("generated_files/history.csv")
-        os.remove("generated_files/poor_acceptance.csv")
-        # should remove the PDF
-        print("generated_files removed successfully")
-    except OSError:
-        pass
+
+    os.remove("generated_files/current.json")
+    os.remove("generated_files/history.json")
+    os.remove("generated_files/current.csv")
+    os.remove("generated_files/history.csv")
+    os.remove("generated_files/poor_acceptance.csv")
+    os.remove("outputs/acceptance_crieteria_report.pdf")
 
     if(idx==5):
         Fut_sprints=get_future_sprint_ids(board_name,sprint_id)
@@ -687,8 +684,8 @@ def process_csv():
     df = pd.read_csv(file_path)
 
     # Apply the condition
-    df['quality_check'] = df['acceptance_crieteria'].apply(
-        lambda x: '' if str(x).strip() == 'Not Well Documented' else 1
+    df['quality_check'] = df['acceptance_result'].apply(
+        lambda x: np.nan if str(x).strip() == 'Not Well Documented' else 1
     )
 
     # Save the modified CSV
