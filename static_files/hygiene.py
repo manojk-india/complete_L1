@@ -297,5 +297,3 @@ def visualize_missing_data_with_low_quality_acceptance(csv_file_path, output_ima
 #     write_to_checkpoint_file("visualization saved to ",output_image_path)
 
 
-
-visualize_missing_data_with_low_quality_acceptance("generated_files/poor_acceptance.csv")

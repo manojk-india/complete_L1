@@ -1,10 +1,10 @@
 {
   "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations,customfield_10010.requestTypePractice",
-  "id": "10014",
-  "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/10014",
-  "key": "DIS-3",
+  "id": "10015",
+  "self": "https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/issue/10015",
+  "key": "DIS-4",
   "fields": {
-    "statuscategorychangedate": "2025-04-16T22:35:32.620+0530",
+    "statuscategorychangedate": "2025-04-24T16:18:29.489+0530",
     "issuetype": {
       "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issuetype/10000",
       "id": "10000",
@@ -15,11 +15,11 @@
       "hierarchyLevel": 1
     },
     "parent": {
-      "id": "10004",
-      "key": "TP-5",
-      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10004",
+      "id": "10002",
+      "key": "TP-3",
+      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10002",
       "fields": {
-        "summary": "EPIC5 - Transaction Processing",
+        "summary": "EPIC3 - Transaction Processing",
         "status": {
           "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
           "description": "",
@@ -70,14 +70,14 @@
       }
     },
     "fixVersions": [],
-    "customfield_10034": null,
     "statusCategory": {
-      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
-      "id": 2,
-      "key": "new",
-      "colorName": "blue-gray",
-      "name": "To Do"
+      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/4",
+      "id": 4,
+      "key": "indeterminate",
+      "colorName": "yellow",
+      "name": "In Progress"
     },
+    "customfield_10034": null,
     "aggregatetimespent": null,
     "resolution": null,
     "customfield_10036": null,
@@ -89,11 +89,11 @@
     "workratio": 0,
     "lastViewed": null,
     "watches": {
-      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/DIS-3/watchers",
+      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/DIS-4/watchers",
       "watchCount": 1,
       "isWatching": false
     },
-    "created": "2025-04-16T22:35:32.191+0530",
+    "created": "2025-04-16T22:35:32.724+0530",
     "customfield_10020": null,
     "customfield_10021": null,
     "customfield_10022": null,
@@ -106,20 +106,20 @@
     "customfield_10023": null,
     "customfield_10024": null,
     "customfield_10025": null,
-    "customfield_10026": null,
     "labels": [
-      "['RTB']"
+      "['CTB']"
     ],
+    "customfield_10026": null,
     "customfield_10016": null,
     "customfield_10017": null,
     "customfield_10018": {
       "hasEpicLinkFieldDependency": false,
       "showField": true,
       "data": {
-        "id": 10004,
-        "key": "TP-5",
-        "keyNum": 5,
-        "summary": "EPIC5 - Transaction Processing",
+        "id": 10002,
+        "key": "TP-3",
+        "keyNum": 3,
+        "summary": "EPIC3 - Transaction Processing",
         "projectId": 10002,
         "issueType": {
           "id": "10034",
@@ -127,46 +127,40 @@
         }
       }
     },
-    "customfield_10019": "0|i0001j:",
-    "timeestimate": 140400,
-    "aggregatetimeoriginalestimate": 140400,
+    "customfield_10019": "0|i0001r:",
+    "timeestimate": 100800,
+    "aggregatetimeoriginalestimate": 100800,
     "versions": [],
     "issuelinks": [],
     "assignee": null,
-    "updated": "2025-04-24T09:59:07.943+0530",
+    "updated": "2025-04-24T22:54:04.704+0530",
     "status": {
-      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/10003",
-      "description": "",
-      "iconUrl": "https://wellsfargo-jira-test.atlassian.net/",
-      "name": "Backlog",
-      "id": "10003",
+      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/status/3",
+      "description": "This issue is being actively worked on at the moment by the assignee.",
+      "iconUrl": "https://wellsfargo-jira-test.atlassian.net/images/icons/statuses/inprogress.png",
+      "name": "In Progress",
+      "id": "3",
       "statusCategory": {
-        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/2",
-        "id": 2,
-        "key": "new",
-        "colorName": "blue-gray",
-        "name": "To Do"
+        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/statuscategory/4",
+        "id": 4,
+        "key": "indeterminate",
+        "colorName": "yellow",
+        "name": "In Progress"
       }
     },
-    "components": [
-      {
-        "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/component/10002",
-        "id": "10002",
-        "name": "TES1"
-      }
-    ],
-    "timeoriginalestimate": 140400,
-    "description": "To comply with regulatory guidelines, customers with expiring KYC documents must receive timely notifications. These should include push notifications, emails, and in-app banners, starting 30 days prior to expiry.",
+    "components": [],
+    "timeoriginalestimate": 100800,
+    "description": "Retail banking users should be able to schedule automatic payments for recurring bills (e.g., utilities, insurance premiums). This feature should support adding/editing/deleting schedules and send reminders 1 day before the scheduled payment.\n\nvalue: Streamline Customer Interaction and Digital adoption by Increasing the adoption of self-serve digital capabilities. ( mobile\u00a0and\u00a0desktop\u00a0)",
     "customfield_10010": null,
     "customfield_10011": null,
     "customfield_10012": null,
     "customfield_10013": null,
     "customfield_10014": null,
     "timetracking": {
-      "originalEstimate": "4d 7h",
-      "remainingEstimate": "4d 7h",
-      "originalEstimateSeconds": 140400,
-      "remainingEstimateSeconds": 140400
+      "originalEstimate": "3d 4h",
+      "remainingEstimate": "3d 4h",
+      "originalEstimateSeconds": 100800,
+      "remainingEstimateSeconds": 100800
     },
     "customfield_10015": null,
     "customfield_10005": null,
@@ -175,10 +169,10 @@
     "customfield_10007": null,
     "customfield_10008": null,
     "customfield_10009": null,
-    "aggregatetimeestimate": 140400,
+    "aggregatetimeestimate": 100800,
     "attachment": [],
     "flagged": false,
-    "summary": "Fix notifications",
+    "summary": "Launch AI-powered personal financial assistant",
     "creator": {
       "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
       "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
@@ -194,9 +188,8 @@
       "accountType": "atlassian"
     },
     "subtasks": [],
-    "customfield_10040": "2025-12-30",
-    "customfield_10042": "Given a customer's KYC document is expiring in less than 30 days,\nWhen they log into any digital banking channel,\nThen they should see a notification banner about re-verification,\nAnd an email and push notification should be triggered every 10 days until re-submission,\nAnd once re-submitted, the reminders should stop.",
-    "customfield_10043": "PRD22532 - Claims | RTB - New feature",
+    "customfield_10040": "2025-02-05",
+    "customfield_10042": "* Analyze monthly spending and categorize into predefined buckets.\n* Alert users if they spend 20% more than usual in any category.\n* Recommend saving plans based on income and spending history.\n* Should support user queries like 'How much did I spend on food last month ?'.",
     "reporter": {
       "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/user?accountId=712020%3Acc03e21d-3190-4e55-90d0-4ffa41861bda",
       "accountId": "712020:cc03e21d-3190-4e55-90d0-4ffa41861bda",
@@ -211,12 +204,13 @@
       "timeZone": "Asia/Calcutta",
       "accountType": "atlassian"
     },
-    "customfield_10044": 39.0,
+    "customfield_10043": "PRD19252 - Claims and recovery | CTB - New feature",
     "aggregateprogress": {
       "progress": 0,
-      "total": 140400,
+      "total": 100800,
       "percent": 0
     },
+    "customfield_10044": 28.0,
     "customfield_10001": null,
     "customfield_10002": [],
     "customfield_10003": null,
@@ -227,20 +221,20 @@
     "duedate": null,
     "progress": {
       "progress": 0,
-      "total": 140400,
+      "total": 100800,
       "percent": 0
+    },
+    "votes": {
+      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/DIS-4/votes",
+      "votes": 0,
+      "hasVoted": false
     },
     "comment": {
       "comments": [],
-      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10014/comment",
+      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/10015/comment",
       "maxResults": 0,
       "total": 0,
       "startAt": 0
-    },
-    "votes": {
-      "self": "https://wellsfargo-jira-test.atlassian.net/rest/api/2/issue/DIS-3/votes",
-      "votes": 0,
-      "hasVoted": false
     },
     "worklog": {
       "startAt": 0,

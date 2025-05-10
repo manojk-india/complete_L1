@@ -69,3 +69,73 @@ matched query is : FTE/FTC utilization of y board in sprint n
 user query is : FTE/FTC utilization of abc1 board in sprint 9
 sim_query is : FTE/FTC utilization of y board in sprint n
 previous_needed_or_not is : False
+---------------------------------------------------------------------------------------
+matched query is : FTE/FTC utilization of y board in sprint n
+2025-05-10 22:09:11.743013
+user query is : FTE/FTC utilization of abc1 board in sprint 9
+sim_query is : FTE/FTC utilization of y board in sprint n
+previous_needed_or_not is : False
+get_L1_board_data called with parameters board_name abc1 sprint_name sprint 9 person_name None previous_data_needed_or_not False
+---------------------------------------------------------------------------------------
+matched query is : Backlog health for y board
+2025-05-10 22:18:42.927881
+user query is : Backlog health of ABC1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+get_L1_board_data called with parameters board_name ABC1 sprint_name None person_name None previous_data_needed_or_not True
+---------------------------------------------------------------------------------------
+matched query is : Backlog health for y board
+2025-05-10 22:28:52.357704
+user query is : Backlog health of ABC1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+get_L1_board_data called with parameters board_name ABC1 sprint_name None person_name None previous_data_needed_or_not True
+api called with: sprint_id - 166 jql - None output_file - generated_files/current.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/166/issue
+api called with: sprint_id - 199 jql - None output_file - generated_files/current.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/199/issue
+api called with: sprint_id - 67 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/67/issue
+api called with: sprint_id - 68 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/68/issue
+api called with: sprint_id - 69 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/69/issue
+api called with: sprint_id - 70 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/70/issue
+api called with: sprint_id - 71 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/71/issue
+api called with: sprint_id - 72 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/72/issue
+added rtb/ctb column to the current.csv file
+added fte/ftc columns to current.csv file
+pandas query crew called
+sprint name(for pto data):['Sprint 11', 'Sprint 12']
+members:['Alice', 'Bob', 'Rishika', 'Hari', 'Apoorva']
+---------------------------------------------------------------------------------------
+matched query is : Backlog health for y board
+2025-05-10 22:37:31.625493
+user query is : Backlog health of ABC1 board
+sim_query is : Backlog health for y board
+previous_needed_or_not is : True
+get_L1_board_data called with parameters board_name ABC1 sprint_name None person_name None previous_data_needed_or_not True
+api called with: sprint_id - 166 jql - None output_file - generated_files/current.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/166/issue
+api called with: sprint_id - 199 jql - None output_file - generated_files/current.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/199/issue
+api called with: sprint_id - 67 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/67/issue
+api called with: sprint_id - 68 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/68/issue
+api called with: sprint_id - 69 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/69/issue
+api called with: sprint_id - 70 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/70/issue
+api called with: sprint_id - 71 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/71/issue
+api called with: sprint_id - 72 jql - None output_file - generated_files/history.json
+URL is : https://wellsfargo-jira-test.atlassian.net/rest/agile/1.0/sprint/72/issue
+added rtb/ctb column to the current.csv file
+added fte/ftc columns to current.csv file
+pandas query crew called
+sprint name(for pto data):['Sprint 11', 'Sprint 12']
+members:['Alice', 'Bob', 'Rishika', 'Hari', 'Apoorva']
