@@ -170,7 +170,7 @@ async def process_audio():
 async def process_message(message):
     """Main message processing handler"""
     
-    # await processing(message.content)
+    await processing(message.content)
 
     await asyncio.sleep(3)
 

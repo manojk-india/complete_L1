@@ -12,7 +12,7 @@ from crews import *
 from static_files.hygiene import *
 
 # main entry point file which will be used by chainLit
-def entrypoint(Query:str) -> str:
+async def entrypoint(Query:str) -> str:
     # loading the environment variables from the .env file
     load_dotenv()
     write_to_checkpoint_file("---------------------------------------------------------------------------------------")

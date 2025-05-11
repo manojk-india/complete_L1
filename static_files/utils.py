@@ -456,13 +456,15 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx
     else:
         jql=None
 
-
-    os.remove("generated_files/current.json")
-    os.remove("generated_files/history.json")
-    os.remove("generated_files/current.csv")
-    os.remove("generated_files/history.csv")
-    os.remove("generated_files/poor_acceptance.csv")
-    os.remove("outputs/acceptance_crieteria_report.pdf")
+    try:
+        os.remove("generated_files/current.json")
+        os.remove("generated_files/history.json")
+        os.remove("generated_files/current.csv")
+        os.remove("generated_files/history.csv")
+        os.remove("generated_files/poor_acceptance.csv")
+        os.remove("outputs/acceptance_crieteria_report.pdf")
+    except:
+        print("files not found to delete")
 
     if(idx==5):
         Fut_sprints=get_future_sprint_ids(board_name,sprint_id)
