@@ -461,7 +461,7 @@ def get_L1_board_data(board_name, previous_data_needed_or_not, sprint,person,idx
         os.remove("generated_files/history.json")
         os.remove("generated_files/current.csv")
         os.remove("generated_files/history.csv")
-        os.remove("generated_files/poor_acceptance.csv")
+        os.remove("generated_files/low_quality_acceptance.csv")
         os.remove("outputs/acceptance_crieteria_report.pdf")
     except:
         print("files not found to delete")

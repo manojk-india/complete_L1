@@ -212,7 +212,7 @@ async def process_message(message):
     ).send()
 
     try:
-        df2= pd.read_csv("generated_files/poor_acceptance.csv") 
+        df2= pd.read_csv("generated_files/low_quality_acceptance.csv") 
 
         await cl.Message(
             content="Here's the list of Low quality acceptance crieterias",

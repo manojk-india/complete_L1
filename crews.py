@@ -10,10 +10,20 @@ from vector_db.db import *
 load_dotenv()
 
 # Initialize LLM model from sambanova 
+# llm = LLM(
+#     model="sambanova/DeepSeek-R1-Distill-Llama-70B",
+#     temperature=0.2,
+#     max_tokens=2048
+# )
+
+# llm=LLM(
+#     model="ollama/mistral:7b-instruct-q4_K_M",
+#     base_url="http://localhost:11434"
+# )
+
 llm = LLM(
-    model="sambanova/DeepSeek-R1-Distill-Llama-70B",
-    temperature=0.2,
-    max_tokens=2048
+    model="gemini/gemini-2.0-flash",
+    temperature=0.7,
 )
 
 

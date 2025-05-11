@@ -12,7 +12,7 @@ from crews import *
 from static_files.hygiene import *
 
 # main entry point file which will be used by chainLit
-async def entrypoint(Query:str) -> str:
+def entrypoint(Query:str) -> str:
     # loading the environment variables from the .env file
     load_dotenv()
     write_to_checkpoint_file("---------------------------------------------------------------------------------------")
@@ -123,11 +123,13 @@ async def entrypoint(Query:str) -> str:
 
 # entrypoint("No of story points assigned to Hari in abc1") -- working fine 
 
-entrypoint("Jira Hygiene of abc1 board")
+# entrypoint("Jira Hygiene of abc1 board")
 
 # entrypoint("RTB/CTB utilization of abc1 board in sprint 9") -- working good 
 
 # entrypoint("FTE/FTC utilization of abc1 board in sprint 9")
+
+entrypoint("Backlog health of abc2 board")
 
 
 
