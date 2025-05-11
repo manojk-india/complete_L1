@@ -123,11 +123,11 @@ def entrypoint(Query:str) -> str:
 
 # entrypoint("No of story points assigned to Hari in abc1") -- working fine 
 
-# entrypoint("Jira Hygiene of abc1 board") -- working fine 
+entrypoint("Jira Hygiene of abc1 board")
 
 # entrypoint("RTB/CTB utilization of abc1 board in sprint 9") -- working good 
 
-entrypoint("FTE/FTC utilization of abc1 board in sprint 9")
+# entrypoint("FTE/FTC utilization of abc1 board in sprint 9")
 
 
 

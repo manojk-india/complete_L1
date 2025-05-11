@@ -69,3 +69,9 @@ matched query is : FTE/FTC utilization of y board in sprint n
 user query is : FTE/FTC utilization of abc1 board in sprint 9
 sim_query is : FTE/FTC utilization of y board in sprint n
 previous_needed_or_not is : False
+---------------------------------------------------------------------------------------
+matched query is : JIRA hygiene for x board
+2025-05-11 09:51:33.555708
+user query is : Jira Hygiene of abc1 board
+sim_query is : JIRA hygiene for x board
+previous_needed_or_not is : False

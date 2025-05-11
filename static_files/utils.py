@@ -11,6 +11,7 @@ import pandas as pd
 from datetime import datetime
 from fpdf import FPDF
 import numpy as np
+import ast
 # import ast
 
 
@@ -667,7 +668,7 @@ def save_rows_with_low_quality_acceptance_crieteria() -> None:
         csv_output: Path to save the filtered CSV file.
     """
     csv_input="generated_files/current.csv"
-    csv_output="generated_files/low_qulaity_acceptance.csv"
+    csv_output="generated_files/low_quality_acceptance.csv"
 
     df = pd.read_csv(csv_input)
 
